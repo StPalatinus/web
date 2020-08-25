@@ -1,0 +1,135 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 рту. 2020 у., 16:02:37
+    Author     : StPalatinus
+*/
+
+/*
+@font-face {
+    font-family: 'TT Lakes Compressed';
+    src: url('fonts/TTLakesCompressed-Regular.eot');
+    src: local('fonts/TT Lakes Compressed Regular'), local('fonts/TTLakesCompressed-Regular'),
+        url('fonts/TTLakesCompressed-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakesCompressed-Regular.woff') format('woff'),
+        url('fonts/TTLakesCompressed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Italic.eot');
+    src: local('fonts/TT Lakes Italic'), local('fonts/TTLakes-Italic'),
+        url('fonts/TTLakes-Italic.eot?#iefix') format('fonts/embedded-opentype'),
+        url('fonts/TTLakes-Italic.woff') format('woff'),
+        url('fonts/TTLakes-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+*/
+
+@import "fonts/stylesheet.css";
+
+.body {
+    font-family: "TT Lakes", sans-serif; 
+}
+
+.header {
+    width: 100%;
+    height: 88px;
+    }
+    
+.header-nav-container {
+    display: flex;
+    list-style: none;
+}
+    
+.header-nav__icon {
+    width: 40px;
+    height: 40px;
+    background: #FF3E79;
+    border-radius: 20px;
+}
+
+.header-nav__divider1 {
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    border-radius: 1px;
+    display: none;
+}
+
+.header-nav__divider2 {
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    border-radius: 1px
+}
+
+.header-nav__logo-container {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    /* height: 50px; */
+    width: 78px;
+    margin: 0 13px;
+    border: 1px solid black;
+}
+
+.header-nav__logo-container:before {
+    position: absolute;
+    content: url(pics/logo-bottom-line.png);
+    left: -10px;
+    bottom: -10px;
+}
+
+.header-nav__logo-container:after {
+    position: absolute;
+    content: url(pics/logo-top-line.png);
+    left: 21px;
+    top: -5px;
+}
+
+.header-nav__logo-c {
+    width: 20px;
+    height: 32px;
+    background: url(pics/logo-letter-c.png) no-repeat;
+    margin: 5px 2px;
+/*    border: 1px solid black;*/
+}
+
+.header-nav__logo-p {
+    width: 20px;
+    height: 32px;
+    background: url(pics/logo-letter-p.png) no-repeat;
+    margin: 5px 2px;
+    /*border: 1px solid black;*/
+}
+
+.header-nav__logo-s {
+    width: 22px;
+    height: 32px;
+    background: url(pics/logo-letter-s.png) no-repeat;
+    margin: 5px 2px;
+    /*border: 1px solid black;*/
+}
+
+@media (min-width: 321px)  {
+    
+    .header-nav__divider1 {
+        display: block;
+    }
+}
+
+@media (min-width: 769px)  {
+    
+}
+/*
+@media (min-width: 1120px) {
+    
+}
+*/
