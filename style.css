@@ -65,7 +65,6 @@ and open the template in the editor.
 
 .header-list {
     display: flex;
-    /*box-sizing: border-box;*/
     margin: 0;
     padding: 0;
     align-items: center;
@@ -92,12 +91,6 @@ and open the template in the editor.
     margin: 24px 8px;
 }
 
-/*.header-button, 
-.header-button:active, 
-.header-button:focus {
-    outline: none;
-}*/
-
 .logo {
     box-sizing: border-box;
 }
@@ -110,31 +103,6 @@ and open the template in the editor.
     box-sizing: border-box;
     margin: 19px 17px;
 }
-
-/*.logo__link:before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 2px;
-    height: 32px;
-    background: #EAEAEA;
-    border-radius: 1px;
-    left: -13px;
-    bottom: 50%;
-    display: none;
-}*/
-
-/*.logo__link:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 2px;
-    height: 32px;
-    background: #EAEAEA;
-    border-radius: 1px;
-    right: -16px;
-    bottom: 28px;
-}*/
 
 .header-list_generel {
     display: none;
@@ -155,7 +123,6 @@ and open the template in the editor.
     border-radius: 1px;
     top: 28px;
     right: -124px;
-/*    display: none;*/
 }
 
 .header-button__call {
