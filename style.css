@@ -41,86 +41,180 @@ and open the template in the editor.
 .header {
     width: 100%;
     height: 88px;
-    }
-    
-.header-nav-container {
+}
+
+.header-nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav_left-section,
+.header-nav_right-section{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav-menu {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.header-list {
+    display: flex;
+    /*box-sizing: border-box;*/
+    margin: 0;
+    padding: 0;
+    align-items: center;
     list-style: none;
 }
+
+.header-list_item {
+    margin: 0;
+    padding: 0;
+}
+
+.header-list_item {
+    position: relative;
+}
     
-.header-nav__icon {
+.header-button {
     width: 40px;
     height: 40px;
     background: #FF3E79;
     border-radius: 20px;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 24px 8px;
 }
 
-.header-nav__divider1 {
+/*.header-button, 
+.header-button:active, 
+.header-button:focus {
+    outline: none;
+}*/
+
+.logo {
+    box-sizing: border-box;
+}
+
+.logo__link {
+    position: relative;
+}
+
+.nav-logo__pozicioner {
+    box-sizing: border-box;
+    margin: 19px 17px;
+}
+
+/*.logo__link:before {
+    content: "";
+    position: absolute;
+    display: block;
     width: 2px;
     height: 32px;
     background: #EAEAEA;
     border-radius: 1px;
+    left: -13px;
+    bottom: 50%;
     display: none;
-}
+}*/
 
-.header-nav__divider2 {
+/*.logo__link:after {
+    content: "";
+    position: absolute;
+    display: block;
     width: 2px;
     height: 32px;
     background: #EAEAEA;
-    border-radius: 1px
+    border-radius: 1px;
+    right: -16px;
+    bottom: 28px;
+}*/
+
+.header-list_generel {
+    display: none;
 }
 
-.header-nav__logo-container {
-    display: flex;
-    box-sizing: border-box;
-    position: relative;
-    /* height: 50px; */
-    width: 78px;
-    margin: 0 13px;
-    border: 1px solid black;
+.header-button__burger {
+    display: block;
+    background: url(pics/burger.png) no-repeat;
 }
 
-.header-nav__logo-container:before {
+.header-button__burger:after {
+    content: "";
     position: absolute;
-    content: url(pics/logo-bottom-line.png);
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    border-radius: 1px;
+    top: 28px;
+    right: -124px;
+/*    display: none;*/
+}
+
+.header-button__call {
+    background: url(pics/call.png) no-repeat;
+}
+
+.header-button__chat {
+    background: url(pics/chat.png) no-repeat;
+}
+
+.header-button__profile {
+    background: url(pics/profile.png) no-repeat;
+}
+
+.header-button__repair {
+    background: url(pics/repair.png) no-repeat;
+}
+
+.header-button__repair:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    border-radius: 1px;
+    top: 28px;
     left: -10px;
-    bottom: -10px;
 }
 
-.header-nav__logo-container:after {
-    position: absolute;
-    content: url(pics/logo-top-line.png);
-    left: 21px;
-    top: -5px;
+.header-button__checkstatus {
+    background: url(pics/checkstatus.png) no-repeat;
 }
 
-.header-nav__logo-c {
-    width: 20px;
-    height: 32px;
-    background: url(pics/logo-letter-c.png) no-repeat;
-    margin: 5px 2px;
-/*    border: 1px solid black;*/
-}
-
-.header-nav__logo-p {
-    width: 20px;
-    height: 32px;
-    background: url(pics/logo-letter-p.png) no-repeat;
-    margin: 5px 2px;
-    /*border: 1px solid black;*/
-}
-
-.header-nav__logo-s {
-    width: 22px;
-    height: 32px;
-    background: url(pics/logo-letter-s.png) no-repeat;
-    margin: 5px 2px;
-    /*border: 1px solid black;*/
-}
-
-@media (min-width: 321px)  {
+@media (min-width: 767px)  {
     
     .header-nav__divider1 {
+        display: block;
+    }
+    
+    .header-list_generel {
+        margin-right: 20px;
+        display: flex;
+    }
+    
+    .nav-logo__pozicioner {
+        margin: 19px 25px;
+    }
+    
+    .logo__link:before {
+        display: block;
+    }
+    
+    .logo__link:after {
+        display: none;
+    }
+    
+    .header-button__burger:after {
+        right: -10px;
         display: block;
     }
 }

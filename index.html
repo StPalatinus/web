@@ -14,21 +14,37 @@ and open the template in the editor.
     <body class="body">
         <header class="header">
             <nav class="header-nav">
-                <ul class="header-nav-container">
-                    <li class="header-nav__icon header-nav__icon--bars"></li>
-                    <li class="header-nav__divider1"></li>
-                    <li class="header-nav__logo-container">
-                        <div class="header-nav__logo-c"></div>
-                        <div class="header-nav__logo-p"></div>
-                        <div class="header-nav__logo-s"></div>
-                    </li>
-                    <li class="header-nav__icon header-nav__icon--phone"></li>
-                    <li class="header-nav__icon header-nav__icon--chat"></li>
-                    <li class="header-nav__icon header-nav__icon--profile"></li>
-                    <li class="header-nav__divider2"></li>
-                    <li class="header-nav__icon header-nav__icon--tools"></li>
-                    <li class="header-nav__icon header-nav__icon--search"></li>
-                </ul>
+                <div class="header-nav_left-section">
+                    <div class="header-nav-menu">
+                        <button type="button" class="header-button header-button__burger"></button>
+                    </div>
+                    <div class="logo nav-logo__pozicioner">
+                        <a class="logo__link" href="#">
+                            <img class="logo__img header-nav_divider" src="pics/csp_logo.png" alt="логотип компании">
+                        </a>
+                    </div>
+                </div>
+                <div class="header-nav_right-section">
+                    <ul class="header-list header-list_generel">
+                        <li class="header-list_item">
+                            <button type="button" class="header-button header-button__call"></button>
+                        </li>
+                        <li class="header-list_item">
+                            <button type="button" class="header-button header-button__chat"></button>
+                        </li>
+                        <li class="header-list_item">
+                            <button type="button" class="header-button header-button__profile"></button>
+                        </li>
+                    </ul>
+                    <ul class="header-list header-list_tools">
+                        <li class="header-list_item">
+                            <button type="button" class="header-button header-button__repair"></button>
+                        </li>
+                        <li class="header-list_item">
+                            <button type="button" class="header-button header-button__checkstatus"></button>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <main class="main-content">
