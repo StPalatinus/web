@@ -26,21 +26,21 @@ and open the template in the editor.
                 </div>
                 <div class="header-nav_right-section">
                     <ul class="header-list header-list_generel">
-                        <li class="header-list__item">
+                        <li class="header-list-item">
                             <button type="button" class="header-button header-button__call"></button>
                         </li>
-                        <li class="header-list__item">
+                        <li class="header-list-item">
                             <button type="button" class="header-button header-button__chat"></button>
                         </li>
-                        <li class="header-list__item">
+                        <li class="header-list-item">
                             <button type="button" class="header-button header-button__profile"></button>
                         </li>
                     </ul>
                     <ul class="header-list header-list_tools">
-                        <li class="header-list__item">
+                        <li class="header-list-item">
                             <button type="button" class="header-button header-button__repair header-button__repair--divider"></button>
                         </li>
-                        <li class="header-list__item">
+                        <li class="header-list-item">
                             <button type="button" class="header-button header-button__checkstatus"></button>
                         </li>
                     </ul>
@@ -50,20 +50,20 @@ and open the template in the editor.
         <main class="main-content">
             <header class="main-header">
                 <div class="services-and-services">
-                    <h1 class="">Услуги и сервиы</h1>
+                    <h1 class="services-and-services__header1">Услуги и сервиы</h1>
                 </div>
                 <div class="main-header-statusbar">
                     <ul class="main-header-buttons-list">
-                        <li class="header-list__item main-header__item">
-                            <label for="mhs-statusbar" class="main-header-button-label">Оставьте заявку</label>
+                        <li class="header-list-item main-header__item">
+                            <label for="mhs-statusbar" class="main-header-button__label">Оставьте заявку</label>
                             <button type="button" id="mhs-statusbar" class="header-button 
                                                         header-button__repair 
                                                         main-header__statusbar">
                                                             
                             </button>
                         </li>
-                        <li class="header-list__item main-header__item">
-                            <label for="mhs-checkstatus" class="main-header-button-label">Статус ремонта</label>
+                        <li class="header-list-item main-header__item">
+                            <label for="mhs-checkstatus" class="main-header-button__label">Статус ремонта</label>
                             <button type="button" id="mhs-checkstatus" class="header-button 
                                                         header-button__checkstatus 
                                                         main-header__checkstatus">
@@ -73,16 +73,56 @@ and open the template in the editor.
                     </ul>
                 </div>
             </header>
-            <nav class="main-nav">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+            <nav class="slide">
+                <ul class="slide-list">
+                    <li class="slide-list-item slide-list-item__reapirable-brends">
+                        <a href="#" class="slide-list-link">Ремонтируемые бренды</a>
+                    </li>
+                    <li class="slide-list-item slide-list-item__reapirable-devices">
+                        <a href="#" class="slide-list-link">Ремонтируемые устройства</a>
+                    </li>
+                    <li class="slide-list-item slide-list-item__supplementary-services">
+                        <a href="#" class="slide-list-link">Дополнительный услуги</a>
+                    </li>
+                    <li class="slide-list-item slide-list-item__servise-prices">
+                        <a href="#" class="slide-list-link">Цены на услуги</a>
+                    </li>
+                    <li class="slide-list-item slide-list-item__sc-addresses">
+                        <a href="#" class="slide-list-link">Адреса сервисных центров</a>
+                    </li>
+                    <li class="slide-list-item slide-list-item__special-prices">
+                        <a href="#" class="slide-list-link">Специальные цены</a>
+                    </li>
+                    <li class="slide-list-item slide-list-item__responses">
+                        <a href="#" class="slide-list-link">Отзывы</a>
+                    </li>
                 </ul>
             </nav>
-            
+            <section class="about-us">
+                <h2 class="visually-hidden">Официальный сервис центр Dell</h2>
+                <article class="about-us-article">
+                    <h2 class="visually-hidden">О нас</h2>
+                    <div class="about-us__text">
+                        <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                        </p>
+                        <p class="about-us__continue">
+                            <a class="about-us__continue--link" href="#">Читать далее</a>
+                        </p>
+                    </div>
+                    <!--
+                    <div class="about-us-image">
+                        <img src="pictures/_MG_3223.png" alt="Логотип компании"/>
+                    </div>
+                     -->
+                    <picture class="about-us-image-container">
+                        <source class="about-us-image" media="(min-width: 320px)" srcset="pictures/_MG_3223_xs.png">
+                        <source class="about-us-image" media="(min-width: 465px)" srcset="pictures/_MG_3223_sm.png">
+                        <source class="about-us-image" media="(min-width: 465px)" srcset="pictures/_MG_3223_lg.png">
+                        <img class="about-us-image" src="pictures/_MG_3223_lg.png" alt="Логотип компании"/>
+                  </picture>
+                </article>
+            </section>
         </main>
     </body>
 </html>

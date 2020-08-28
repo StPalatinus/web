@@ -34,15 +34,33 @@ and open the template in the editor.
 
 @import "fonts/stylesheet.css";
 
+html {
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    padding: 16px 24px 8px;
+}
+
 /* HEADER */
 
 .body {
     font-family: "TT Lakes", sans-serif; 
+    background: #F8F8F8;
 }
 
 .header {
     width: 100%;
     height: 88px;
+    background: #FFFFFF;
 }
 
 .header-nav {
@@ -67,19 +85,17 @@ and open the template in the editor.
 
 .header-list {
     display: flex;
-    margin: 0;
-    padding: 0;
+/*    margin: 0;
+    padding: 0;*/
     align-items: center;
     list-style: none;
 }
 
-.header-list__item {
-    margin: 0;
-    padding: 0;
-}
-
-.header-list__item {
+.header-list-item {
     position: relative;
+    text-align: center;
+/*    margin: 0;
+    padding: 0;*/
 }
     
 .header-button {
@@ -166,6 +182,10 @@ and open the template in the editor.
 
 /* MAIN */
 
+.main-content {
+    
+}
+
 .main-header {
     display: flex;
     justify-content: flex-start;
@@ -175,7 +195,121 @@ and open the template in the editor.
     display: flex;
 }
 
-@media (min-width: 767px)  {
+.services-and-services__header1 {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+}
+
+/* SLIDE */
+
+.slide {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    /*scroll-snap-type: y mandatory;*/
+}
+
+.slide::-webkit-scrollbar {
+    width: 0px;  /* ¯ËËÌ‡ scrollbar'a */ 
+    background: transparent;   /*ÓÔˆËÓÌ‡Î¸ÌÓ  */}
+
+
+.slide-list {
+    display: flex;
+    justify-content:space-between;
+/*    align-items:center;*/
+    list-style: none;
+/*    scroll-snap-align: start;*/
+}
+
+.slide-list-item {
+    /*height: 40px;*/
+    padding: 8px 22px;
+    white-space: nowrap;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.slide-list-link {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+}
+
+.slide-list-item:hover {
+    border: 2px solid #B8FFEC;
+}
+
+.slide-list-item:active {
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    box-sizing: border-box;
+    border-radius: 6px;
+    /*transform: matrix(-1, 0, 0, 1, 0, 0);*/
+}
+
+.slide-list-item__reapirable-brends {
+    display: none;
+}
+
+    /* ABOUT-US */
+    
+.about-us {
+    padding-top: 5px;
+}    
+
+.about-us__continue {
+    background: url(pics/continue_read_icon.png) no-repeat;
+    background-position-y: center;
+    margin: 12px;
+    margin-left: 20px;
+    padding-left: 32px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+.about-us__continue--link {
+    text-decoration: none;
+}
+
+.about-us-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us__text {
+    margin-left: 16px
+}
+
+.about-us-image {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.about-us-image-container {
+    
+}
+
+/*@media only screen and (min-width: 575px) {
+     ABOUT-US 
+    .about-us-article {
+        flex-direction: row;
+    }
+}*/
+
+
+@media only screen and (min-width: 767px)  {
+    
+    .body {
+        padding: 24px 24px 11px;
+    }
     
     /* HEADER */
     
@@ -211,9 +345,34 @@ and open the template in the editor.
     
     /* MAIN */
     
+    /* SLIDE */
+    
+    /* ABOUT-US */
+    .about-us-article {
+        flex-direction: row;
+    }
+    
+    .about-us__text {
+        padding-right: 48px;
+        margin-left: 24px
+    }
+    
+    .about-us__continue {
+    }
+    
+    .about-us-image {
+        width: 100%;
+        min-width: 360px;
+/*        height: auto;
+        margin: 0 auto;*/
+    }
 }
 
-@media (min-width: 1119px)  {
+@media only screen and (min-width: 1119px)  {
+    
+      .body {
+        padding: 42px 32px 14px;
+    }
     
     /* HEADER */
     
@@ -231,7 +390,16 @@ and open the template in the editor.
     .main-header-statusbar {
         display: block;
     }
+    
+    .main-header-button__label {
+        cursor: pointer;
+    }
 
+    .main-header__statusbar,
+    .main-header__checkstatus {
+        /*—“»À»«Œ¬¿“‹ Œ”“¿…Õ ≈—À» œŒÀ”◊»“—ﬂ*/
+    }
+    
     .main-header-buttons-list {
         display: flex;
         margin: 0;
@@ -242,13 +410,54 @@ and open the template in the editor.
     
     .main-header__item {
         display: flex;
-        align-items:center;
+        align-items: center;
     }
 
     .main-header-buttons-list {
         display: flex;
     }
+    
+    /* SLIDE */
+    
+    .slide-list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+     .slide-list-item__reapirable-brends {
+    display: block;
+    }
+    
+    /* ABOUT-US */
+    .about-us-article {
+        flex-direction: row;
+    }
+    
+    .about-us__text {
+        padding-right: 36px;
+        margin-left: 34px
+    }
+    
+    .about-us-image {
+        width: 100%;
+        min-width: 532px;
+/*        height: auto;
+        margin-right: 36px;*/
+    }
 }
+
+    /* GENERAL */
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
 /*
 @media (min-width: 1120px) {
     
