@@ -34,6 +34,8 @@ and open the template in the editor.
 
 @import "fonts/stylesheet.css";
 
+/* HEADER */
+
 .body {
     font-family: "TT Lakes", sans-serif; 
 }
@@ -71,12 +73,12 @@ and open the template in the editor.
     list-style: none;
 }
 
-.header-list_item {
+.header-list__item {
     margin: 0;
     padding: 0;
 }
 
-.header-list_item {
+.header-list__item {
     position: relative;
 }
     
@@ -113,7 +115,7 @@ and open the template in the editor.
     background: url(pics/burger.png) no-repeat;
 }
 
-.header-button__burger:after {
+.header-button__burger--divider:after {
     content: "";
     position: absolute;
     display: block;
@@ -141,7 +143,7 @@ and open the template in the editor.
     background: url(pics/repair.png) no-repeat;
 }
 
-.header-button__repair:before {
+.header-button__repair--divider:before {
     content: "";
     position: absolute;
     display: block;
@@ -158,7 +160,24 @@ and open the template in the editor.
     background: url(pics/checkstatus.png) no-repeat;
 }
 
+.main-header-statusbar {
+    display: none;
+}
+
+/* MAIN */
+
+.main-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.services-and-services {
+    display: flex;
+}
+
 @media (min-width: 767px)  {
+    
+    /* HEADER */
     
     .header-nav__divider1 {
         display: block;
@@ -181,18 +200,54 @@ and open the template in the editor.
         display: none;
     }
     
-    .header-button__burger:after {
+    .header-button__burger--divider:after {
         right: -10px;
         display: block;
     }
     
-    .header-button__repair:before {
+    .header-button__repair--divider:before {
         display: block;
     }
+    
+    /* MAIN */
+    
 }
 
-@media (min-width: 320px)  {
+@media (min-width: 1119px)  {
     
+    /* HEADER */
+    
+    .header {
+        display: none;
+    }
+    
+    /* MAIN */
+    
+    .main-header {
+        display: flex;
+        justify-content:space-between;
+    }
+    
+    .main-header-statusbar {
+        display: block;
+    }
+
+    .main-header-buttons-list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+    
+    .main-header__item {
+        display: flex;
+        align-items:center;
+    }
+
+    .main-header-buttons-list {
+        display: flex;
+    }
 }
 /*
 @media (min-width: 1120px) {
