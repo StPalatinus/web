@@ -1,35 +1,6 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : 25 рту. 2020 у., 16:02:37
     Author     : StPalatinus
-*/
-
-/*
-@font-face {
-    font-family: 'TT Lakes Compressed';
-    src: url('fonts/TTLakesCompressed-Regular.eot');
-    src: local('fonts/TT Lakes Compressed Regular'), local('fonts/TTLakesCompressed-Regular'),
-        url('fonts/TTLakesCompressed-Regular.eot?#iefix') format('embedded-opentype'),
-        url('fonts/TTLakesCompressed-Regular.woff') format('woff'),
-        url('fonts/TTLakesCompressed-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('fonts/TTLakes-Italic.eot');
-    src: local('fonts/TT Lakes Italic'), local('fonts/TTLakes-Italic'),
-        url('fonts/TTLakes-Italic.eot?#iefix') format('fonts/embedded-opentype'),
-        url('fonts/TTLakes-Italic.woff') format('woff'),
-        url('fonts/TTLakes-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
 */
 
 @import "fonts/stylesheet.css";
@@ -86,8 +57,6 @@ ul {
 
 .header-list {
     display: flex;
-/*    margin: 0;
-    padding: 0;*/
     align-items: center;
     list-style: none;
 }
@@ -95,8 +64,6 @@ ul {
 .header-list-item {
     position: relative;
     text-align: center;
-/*    margin: 0;
-    padding: 0;*/
 }
     
 .header__button {
@@ -222,7 +189,6 @@ ul {
     overflow-y: scroll;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
-    /*scroll-snap-type: y mandatory;*/
 }
 
 .slide::-webkit-scrollbar {
@@ -233,13 +199,10 @@ ul {
 .slide-list {
     display: flex;
     justify-content:space-between;
-/*    align-items:center;*/
     list-style: none;
-/*    scroll-snap-align: start;*/
 }
 
 .slide-list__item {
-    /*height: 40px;*/
     padding: 8px 22px;
     white-space: nowrap;
     text-align: center;
@@ -263,7 +226,6 @@ ul {
     border: 2px solid #B8FFEC;
     box-sizing: border-box;
     border-radius: 6px;
-    /*transform: matrix(-1, 0, 0, 1, 0, 0);*/
 }
 
 .slide-list__item--reapirable-brends {
@@ -281,7 +243,6 @@ ul {
     background-position-y: center;
     margin: 12px;
     margin-left: 20px;
-/*    padding-left: 32px;*/
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
@@ -314,13 +275,6 @@ ul {
 .about-us-image-container {
     
 }
-
-/*@media only screen and (min-width: 575px) {
-     ABOUT-US 
-    .about-us-article {
-        flex-direction: row;
-    }
-}*/
 
 
 @media only screen and (min-width: 768px)  {
@@ -379,10 +333,7 @@ ul {
     }
     
     .about-us-image {
-/*        width: 100%;*/
         min-width: 360px;
-/*        height: auto;
-        margin: 0 auto;*/
     }
 }
 
@@ -456,12 +407,7 @@ ul {
     }
     
     .about-us-image {
-        /*width: 100%;*/
         min-width: 532px;
-/*        height: auto;
-        margin: 0 auto;*/
-/*        height: auto;
-        margin-right: 36px;*/
     }
 }
 
@@ -477,9 +423,3 @@ ul {
 	width: 1px !important; 
 	overflow: hidden;
 }
-
-/*
-@media (min-width: 1120px) {
-    
-}
-*/
