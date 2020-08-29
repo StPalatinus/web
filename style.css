@@ -353,6 +353,8 @@ ul {
     
       .body {
         padding: 42px 32px 14px;
+        max-width: 1120px;
+        margin: 0 auto;
     }
     
     /* HEADER */
