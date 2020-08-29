@@ -349,6 +349,10 @@ ul {
         display: none;
     }
     
+    .main-header__statusbar {
+    display: block;
+}
+    
     /* MAIN */
     
     .main-header {
@@ -366,7 +370,7 @@ ul {
 
     .main-header__statusbar,
     .main-header__checkstatus {
-        /*ярхкхгнбюрэ нсрюим еякх онксвхряъ*/
+        /*ярхкхгнбюрэ нсркюим еякх онксвхряъ*/
     }
     
     .main-header-buttons-list {
