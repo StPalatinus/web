@@ -220,6 +220,7 @@ ul {
 
 .slide-list__item:hover {
     border: 2px solid #B8FFEC;
+    background: #FFFFFF;
 }
 
 .slide-list__item:active {
