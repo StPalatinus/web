@@ -11,6 +11,7 @@ html {
     /* or 143% */
     letter-spacing: 0.2px;
     color: #1B1C21;
+    background: #FFF;
 }
 ul {
     margin: 0;
@@ -26,7 +27,7 @@ ul {
 
 .body {
     font-family: "TT Lakes", sans-serif; 
-    background: #F8F8F8;
+    background: #F2F2F2;
 }
 
 .header {
@@ -174,7 +175,7 @@ ul {
 .services-and-services__header:before {
     display: block;
     position: absolute;
-    left: 0;
+    left: 8px;
     border-top-right-radius:20px;
     border-bottom-right-radius:20px;
     content: "";
@@ -234,6 +235,11 @@ ul {
 
     /* ABOUT-US */
     
+.about-us__text,
+.about-us__image-container {
+    width: 100%;
+}
+
 .about-us {
     padding-top: 5px;
 }    
@@ -320,6 +326,12 @@ ul {
     /* SLIDE */
     
     /* ABOUT-US */
+    
+    .about-us__text,
+    .about-us__image-container {
+        width: 50%;
+    }
+    
     .about-us-article {
         flex-direction: row;
     }
