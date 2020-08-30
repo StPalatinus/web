@@ -55,18 +55,16 @@ and open the template in the editor.
                 <div class="main-header__statusbar">
                     <ul class="main-header-buttons-list">
                         <li class="header-list-item main-header__item">
-                            <label for="mhs-statusbar" class="main-header-button__label">Оставьте заявку</label>
                             <button type="button" id="mhs-statusbar" class="header__button 
                                                                             header-button__repair 
-                                                                            main-header__statusbar">
+                                                                            main-header__request-button">Оставьте заявку
                                                             
                             </button>
                         </li>
                         <li class="header-list-item main-header__item">
-                            <label for="mhs-checkstatus" class="main-header-button__label">Статус ремонта</label>
                             <button type="button" id="mhs-checkstatus" class="header__button 
                                                                               header-button__checkstatus 
-                                                                              main-header__checkstatus">
+                                                                              main-header__repair-status">Статус ремонта
                                                             
                             </button>
                         </li>
@@ -75,7 +73,7 @@ and open the template in the editor.
             </header>
             <nav class="slide">
                 <ul class="slide-list">
-                    <li class="slide-list__item slide-list__item--reapirable-brends">
+                    <li class="slide-list__item slide-list__item--reapairable-brends">
                         <a href="#" class="slide-list__link">Ремонтируемые бренды</a>
                     </li>
                     <li class="slide-list__item slide-list__item--reapirable-devices">
@@ -102,18 +100,27 @@ and open the template in the editor.
                 <h2 class="visually-hidden">Официальный сервис центр Dell</h2>
                 <article class="about-us-article">
                     <h2 class="visually-hidden">О нас</h2>
-                    <div class="about-us__text">
-                        <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
-                        </p>
+                    <div class="about-us__text-container">
                         <p class="about-us__continue">
-                            <a class="about-us__continue--link" href="#">Читать далее</a>
+                            <button type="button" class="about-us__continue--button">Читать далее</button>
+                        </p>
+                        <p class="about-us__text-block">
+                            <span class="about-us__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
+                                Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                            </span>
+                            <span class="about-us__text">
+                                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, 
+                                что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
+                                что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                            </span>
                         </p>
                     </div>
                     <picture class="about-us__image-container">
-                        <source class="about-us-image" media="(min-width: 320px)" srcset="pictures/_MG_3223_xs.png">
-                        <source class="about-us-image" media="(min-width: 768px)" srcset="pictures/_MG_3223_sm.png">
                         <source class="about-us-image" media="(min-width: 1120px)" srcset="pictures/_MG_3223_lg.png">
+                        <source class="about-us-image" media="(min-width: 768px)" srcset="pictures/_MG_3223_sm.png">
+                        <source class="about-us-image" media="(min-width: 320px)" srcset="pictures/_MG_3223_xs.png">
+                        
+                        
                         <img class="about-us-image" src="pictures/_MG_3223_lg.png" alt="Логотип компании"/>
                   </picture>
                 </article>

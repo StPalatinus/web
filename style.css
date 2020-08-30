@@ -28,6 +28,7 @@ ul {
 .body {
     font-family: "TT Lakes", sans-serif; 
     background: #F2F2F2;
+    margin: 0;
 }
 
 .header {
@@ -175,7 +176,7 @@ ul {
 .services-and-services__header:before {
     display: block;
     position: absolute;
-    left: 8px;
+    left: 0;
     border-top-right-radius:20px;
     border-bottom-right-radius:20px;
     content: "";
@@ -204,30 +205,32 @@ ul {
 }
 
 .slide-list__item {
-    padding: 8px 22px;
+    box-sizing: content-box;
     white-space: nowrap;
     text-align: center;
-    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .slide-list__link {
+    display: block;
+    padding: 8px 22px;
     text-decoration: none;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7E7E82;
-}
-
-.slide-list__item:hover {
-    border: 2px solid #B8FFEC;
-    background: #FFFFFF;
-}
-
-.slide-list__item:active {
-    background: #FFFFFF;
-    border: 2px solid #B8FFEC;
-    box-sizing: border-box;
+    outline-color: #B8FFEC;
+    border: 2px solid transparent;
     border-radius: 6px;
+    outline: none;
+}
+
+.slide-list__link:hover,
+.slide-list__link:focus, 
+.slide-list__link:active {
+    border: 2px solid #B8FFEC;
+    background: #FFFFFF;
 }
 
 .slide-list__item--reapirable-brends {
@@ -236,9 +239,40 @@ ul {
 
     /* ABOUT-US */
     
-.about-us__text,
+.about-us__text-container,
 .about-us__image-container {
     width: 100%;
+}
+
+.about-us__text-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:column;
+}
+
+.about-us__text-block {
+    overflow: hidden;
+    height: 97px;
+    box-sizing: border-box;
+}
+
+.about-us__continue {
+    order: 2;
+}
+
+.about-us__continue:active + .about-us__text-block {
+    height: 100%;
+}
+
+.about-us__continue:active  {
+    display: none;
+}
+
+.about-us__text {
+    display: inline-block;
+    padding-right: 16px;
+    margin-bottom: 15px;
+    user-select: none;
 }
 
 .about-us {
@@ -246,22 +280,21 @@ ul {
 }    
 
 .about-us__continue {
+    font-family: "TT Lakes", sans-serif;
+    overflow: hidden;
+}
+
+.about-us__continue--button {
     background: url(pics/continue_read_icon.png) no-repeat;
     background-position-y: center;
+    padding-left: 32px;
     margin: 12px;
     margin-left: 20px;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
-}
-
-.about-us__continue--link {
-    display: inline-block;
-    text-decoration: none;
-    background: url(pics/continue_read_icon.png) no-repeat;
-    background-position-y: center;
-    padding-left: 32px;
+    border: none;
 }
 
 .about-us-article {
@@ -270,7 +303,7 @@ ul {
 }
 
 .about-us__text {
-    margin-left: 16px
+    margin-left: 16px;
 }
 
 .about-us-image {
@@ -287,7 +320,7 @@ ul {
 @media only screen and (min-width: 768px)  {
     
     .body {
-        padding: 24px 24px 11px;
+        
     }
     
     /* HEADER */
@@ -328,7 +361,7 @@ ul {
     
     /* ABOUT-US */
     
-    .about-us__text,
+    .about-us__text-container,
     .about-us__image-container {
         width: 50%;
     }
@@ -337,9 +370,16 @@ ul {
         flex-direction: row;
     }
     
-    .about-us__text {
+    .about-us__text-container {
         padding-right: 48px;
-        margin-left: 24px
+    }
+    
+    .about-us__text-block {
+        max-height: 159px;
+    }
+    
+    .about-us__text {
+        margin-left: 24px;
     }
     
     .about-us__continue {
@@ -347,6 +387,7 @@ ul {
     
     .about-us-image {
         min-width: 360px;
+        border-radius: 10px;
     }
 }
 
@@ -354,7 +395,7 @@ ul {
     
       .body {
         padding: 42px 32px 14px;
-        max-width: 1120px;
+        /*max-width: 1120px;*/
         margin: 0 auto;
     }
     
@@ -378,14 +419,13 @@ ul {
     .main-header-statusbar {
         display: block;
     }
-    
-    .main-header-button__label {
-        cursor: pointer;
-    }
 
-    .main-header__statusbar,
-    .main-header__checkstatus {
-        /*—“»À»«Œ¬¿“‹ Œ”“À¿…Õ ≈—À» œŒÀ”◊»“—ﬂ*/
+    .main-header__request-button,
+    .main-header__repair-status {
+        width: auto;
+        padding-right: 48px;
+        background-position-x: right;
+        white-space: nowrap;
     }
     
     .main-header-buttons-list {
@@ -396,9 +436,12 @@ ul {
         text-align: center;
     }
     
+    .header-list-item {
+        width: auto;
+    }
+    
     .main-header__item {
-        display: flex;
-        align-items: center;
+        
     }
 
     .main-header-buttons-list {
@@ -415,14 +458,25 @@ ul {
     display: block;
     }
     
+    .slide-list__item--reapairable-brends {
+        display: block;
+    }
+    
     /* ABOUT-US */
     .about-us-article {
         flex-direction: row;
     }
     
+    .about-us__text-container {
+        padding-right: 36px;    
+    }
+    
+    .about-us__text-block {
+        max-height: 160px;
+    }
+    
     .about-us__text {
-        padding-right: 36px;
-        margin-left: 34px
+        margin-left: 34px;
     }
     
     .about-us-image {
