@@ -32,19 +32,16 @@ ul {
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 88px;
     background: #FFFFFF;
 }
 
-.header-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-nav__left-section,
-.header-nav__right-section{
+.header__left-section,
+.header__right-section{
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -52,7 +49,7 @@ ul {
     padding: 0;
 }
 
-.header-nav__menu {
+.header__menu {
     position: relative;
     box-sizing: border-box;
 }
@@ -325,7 +322,7 @@ ul {
     
     /* HEADER */
     
-    .header-nav__divider1 {
+    .header__divider1 {
         display: block;
     }
     
