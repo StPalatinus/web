@@ -40,8 +40,8 @@ ul {
     background: #FFFFFF;
 }
 
-.header__left-section,
-.header__right-section{
+.header__logo-section,
+.header__buttons-section{
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -76,7 +76,7 @@ ul {
     margin: 24px 8px;
 }
 
-.nav-logo {
+.logo {
     box-sizing: border-box;
 }
 
@@ -84,7 +84,7 @@ ul {
     position: relative;
 }
 
-.nav-logo__pozicioner {
+.header__logo {
     box-sizing: border-box;
     margin: 19px 17px;
 }
@@ -331,7 +331,7 @@ ul {
         display: flex;
     }
     
-    .nav-logo__pozicioner {
+    .header__logo {
         margin: 19px 25px;
     }
     
