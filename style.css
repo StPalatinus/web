@@ -184,24 +184,24 @@ ul {
 
 /* SLIDE */
 
-.slide {
+.nav {
     overflow-y: scroll;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
 }
 
-.slide::-webkit-scrollbar {
+.nav::-webkit-scrollbar {
     width: 0px;  /* ширина scrollbar'a */ 
     background: transparent;   /*опционально  */}
 
 
-.slide-list {
+.main__nav {
     display: flex;
     justify-content:space-between;
     list-style: none;
 }
 
-.slide-list__item {
+.nav__item {
     box-sizing: content-box;
     white-space: nowrap;
     text-align: center;
@@ -209,7 +209,7 @@ ul {
     cursor: pointer;
 }
 
-.slide-list__link {
+.nav__link {
     display: block;
     padding: 8px 22px;
     text-decoration: none;
@@ -223,14 +223,14 @@ ul {
     outline: none;
 }
 
-.slide-list__link:hover,
-.slide-list__link:focus, 
-.slide-list__link:active {
+.nav__link:hover,
+.nav__link:focus, 
+.nav__link:active {
     border: 2px solid #B8FFEC;
     background: #FFFFFF;
 }
 
-.slide-list__item--reapirable-brends {
+.nav__item--reapirable-brends {
     display: none;
 }
 
@@ -452,7 +452,7 @@ ul {
     display: block;
     }
     
-    .slide-list__item--reapairable-brends {
+    .nav__item--reapairable-brends {
         display: block;
     }
     
