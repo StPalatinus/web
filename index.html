@@ -23,7 +23,7 @@ and open the template in the editor.
                     </a>
                 </div>
             </div>
-            <div class="header__buttons-section">
+            <div class="header__buttons">
                 <ul class="header-list header-list_generel">
                     <li class="header-list-item">
                         <button type="button" class="header__button header-button__call"></button>
@@ -37,34 +37,34 @@ and open the template in the editor.
                 </ul>
                 <ul class="header-list header-list_tools">
                     <li class="header-list-item header-button__repair--divider">
-                        <button type="button" class="header__button header-button__repair"></button>
+                        <button type="button" class="header__button 
+                                                     header-button__repair"></button>
                     </li>
                     <li class="header-list-item">
-                        <button type="button" class="header__button header-button__checkstatus"></button>
+                        <button type="button" class="header__button 
+                                                     header-button__checkstatus"></button>
                     </li>
                 </ul>
             </div>
         </header>
         <main class="main">
-            <header class="main-header">
-                <div class="services-and-services">
-                    <h1 class="services-and-services__header">Услуги и сервиы</h1>
-                </div>
+            <header class="main__header">
+                <!--<div class="services-and-services">-->
+                    <h1 class="title">Услуги и сервиы</h1>
+                <!--</div>-->
                 <div class="main-header__statusbar">
-                    <ul class="main-header-buttons-list">
-                        <li class="header-list-item main-header__item">
-                            <button type="button" id="mhs-statusbar" class="header__button 
-                                                                            header-button__repair 
-                                                                            main-header__request-button">Оставьте заявку
-                                                            
-                            </button>
+                    <ul class="main__header--buttons-list">
+                        <li class="header-list-item">
+                            <button type="button" class="header__button 
+                                                         header-button__repair
+                                                         header-button__repair--contain-text
+                                                         ">Оставьте заявку</button>
                         </li>
-                        <li class="header-list-item main-header__item">
-                            <button type="button" id="mhs-checkstatus" class="header__button 
-                                                                              header-button__checkstatus 
-                                                                              main-header__repair-status">Статус ремонта
-                                                            
-                            </button>
+                        <li class="header-list-item">
+                            <button type="button" class="header__button 
+                                                         header-button__checkstatus
+                                                         header-button__checkstatus--contain-text
+                                                         ">Статус ремонта</button>
                         </li>
                     </ul>
                 </div>

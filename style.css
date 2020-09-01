@@ -41,7 +41,7 @@ ul {
 }
 
 .header__logo-section,
-.header__buttons-section{
+.header__buttons {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -153,16 +153,16 @@ ul {
     
 }
 
-.main-header {
+.main__header {
     display: flex;
     justify-content: flex-start;
 }
 
-.services-and-services {
+/*.services-and-services {
     display: flex;
-}
+}*/
 
-.services-and-services__header {
+.title {
     padding-left: 24px;
     font-size: 28px;
     line-height: 40px;
@@ -170,7 +170,7 @@ ul {
     color: #1B1C21;
 }
 
-.services-and-services__header:before {
+.title:before {
     display: block;
     position: absolute;
     left: 0;
@@ -263,6 +263,7 @@ ul {
 
 .about-us__continue:active  {
     display: none;
+    /*visibility: hidden;*/
 }
 
 .about-us__text {
@@ -408,24 +409,24 @@ ul {
     
     /* MAIN */
     
-    .main-header {
+    .main__header {
         display: flex;
         justify-content:space-between;
     }
     
-    .main-header-statusbar {
+/*    .main-header-statusbar {
         display: block;
-    }
+    }*/
 
-    .main-header__request-button,
-    .main-header__repair-status {
+    .header-button__repair--contain-text,
+    .header-button__checkstatus--contain-text {
         width: auto;
         padding-right: 48px;
         background-position-x: right;
         white-space: nowrap;
     }
     
-    .main-header-buttons-list {
+    .main__header--buttons-list {
         display: flex;
         margin: 0;
         padding: 0;
@@ -436,12 +437,8 @@ ul {
     .header-list-item {
         width: auto;
     }
-    
-    .main-header__item {
-        
-    }
 
-    .main-header-buttons-list {
+    .main__header--buttons-list {
         display: flex;
     }
     
