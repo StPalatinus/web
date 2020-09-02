@@ -19,55 +19,39 @@ and open the template in the editor.
                 </div>
                 <div class="logo header__logo">
                     <a class="logo__link" href="#">
-                        <img class="logo__img" src="pics/csp_logo.png" alt="логотип компании">
+                        <img class="logo__img" src="img/logo/csp_logo.png" alt="логотип компании">
                     </a>
                 </div>
             </div>
             <div class="header__buttons">
-                <ul class="header-list header-list_generel">
-                    <li class="header-list-item">
+                <ul class="feedback-list">
+                    <li class="header-list__item">
                         <button type="button" class="header__button header-button__call"></button>
                     </li>
-                    <li class="header-list-item">
+                    <li class="header-list__item">
                         <button type="button" class="header__button header-button__chat"></button>
                     </li>
-                    <li class="header-list-item">
+                    <li class="header-list__item">
                         <button type="button" class="header__button header-button__profile"></button>
                     </li>
                 </ul>
-                <ul class="header-list header-list_tools">
-                    <li class="header-list-item header-button__repair--divider">
+                <ul class="service-list">
+                    <li class="header-list__item header-button__repair--divider">
                         <button type="button" class="header__button 
-                                                     header-button__repair"></button>
+                                                    header__button--contains-text
+                                                    header-button__repair"><span class="header__button--inscription">Оставьте заявку</span></button>
                     </li>
-                    <li class="header-list-item">
+                    <li class="header-list__item">
                         <button type="button" class="header__button 
-                                                     header-button__checkstatus"></button>
+                                                    header__button--contains-text
+                                                    header-button__checkstatus"><span class="header__button--inscription">Статус ремонта</span></button>
                     </li>
                 </ul>
             </div>
         </header>
+        <h1 class="title">Услуги и сервиы</h1>
         <main class="main">
             <header class="main__header">
-                <!--<div class="services-and-services">-->
-                    <h1 class="title">Услуги и сервиы</h1>
-                <!--</div>-->
-                <div class="main-header__statusbar">
-                    <ul class="main__header--buttons-list">
-                        <li class="header-list-item">
-                            <button type="button" class="header__button 
-                                                         header-button__repair
-                                                         header-button__repair--contain-text
-                                                         ">Оставьте заявку</button>
-                        </li>
-                        <li class="header-list-item">
-                            <button type="button" class="header__button 
-                                                         header-button__checkstatus
-                                                         header-button__checkstatus--contain-text
-                                                         ">Статус ремонта</button>
-                        </li>
-                    </ul>
-                </div>
             </header>
             <nav class="nav">
                 <ul class="main__nav">
@@ -75,7 +59,7 @@ and open the template in the editor.
                         <a href="#" class="nav__link">Ремонтируемые бренды</a>
                     </li>
                     <li class="nav__item nav__item--reapirable-devices">
-                        <a href="#" class="nav__link">Ремонтируемые устройства</a>
+                        <a href="#" class="nav__link nav__link--active">Ремонтируемые устройства</a>
                     </li>
                     <li class="nav__item nav__item--supplementary-services">
                         <a href="#" class="nav__link">Дополнительный услуги</a>
@@ -102,10 +86,10 @@ and open the template in the editor.
                             <button type="button" class="about-us__continue--button">Читать далее</button>
                         </p>
                         <div class="article__text--wrapper">
-                            <p class="article-innertext">Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
+                            <p class="article-text-paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
                                 Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
                             </p>
-                            <p class="article-innertext">
+                            <p class="article-text-paragraph">
                                 Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, 
                                 что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
                                 что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
@@ -113,10 +97,10 @@ and open the template in the editor.
                         </div>
                     </div>
                     <picture class="article__picture">
-                        <source class="article__image" media="(min-width: 1120px)" srcset="./pictures/logo_lg.png">
-                        <source class="article__image" media="(min-width: 768px)" srcset="./pictures/logo_sm.png">
-                        <source class="article__image" media="(min-width: 320px)" srcset="./pictures/logo_xs.png">
-                        <img class="article__image" src="./pictures/logo_lg.png" alt="Логотип компании"/>
+                        <source class="article__image" media="(min-width: 1120px)" srcset="./img/logo/logo_lg.png">
+                        <source class="article__image" media="(min-width: 768px)" srcset="./img/logo/logo_sm.png">
+                        <source class="article__image" media="(min-width: 320px)" srcset="./img/logo/logo_xs.png">
+                        <img class="article__image" src="./img/logo/logo_lg.png" alt="Логотип компании"/>
                     </picture>
                 </div>
             </article>
