@@ -261,10 +261,6 @@ ul {
     box-sizing: border-box;
 }
 
-.read-more {
-    
-}
-
 /*.read-more:active + .text-inner {
     height: 100%;
 }
@@ -286,25 +282,25 @@ ul {
 }    
 
 .read-more {
-    font-family: "TT Lakes", sans-serif;
-    overflow: hidden;
-}
-
-.article__read-more {
     width: 150px;
     background-color: transparent;
     padding-left: 14px;
-    margin: 12px;
-    margin-left: 20px;
+    font-family: "TT Lakes", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     white-space: nowrap;
     color: #1B1C21;
     border: none;
+    overflow: hidden;
 }
 
-.article__read-more::before {
+.article__read-more {
+    margin: 12px;
+    margin-left: 20px;
+}
+
+.read-more::before {
     display: block;
     position: absolute;
     content: url("./img/icons/continue_read_icon.png");
