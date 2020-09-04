@@ -30,15 +30,9 @@ ul {
 
 /* HEADER */
 
-/*.body {
-    font-family: "TT Lakes", sans-serif; 
-    background: #F2F2F2;
-    margin: 0;
-}*/
-
 .header {
     display: flex;
-    justify-content: space-between;
+/*    justify-content: space-between;*/
     align-items: center;
     box-sizing: border-box;
     width: 100%;
@@ -51,7 +45,6 @@ ul {
     display: none;
 }
 
-.header__logo-section,
 .header__buttons {
     box-sizing: border-box;
     display: flex;
@@ -72,7 +65,12 @@ ul {
     list-style: none;
 }
 
-.header-list__item {
+.header-list__services {
+    margin-left: auto;
+}
+
+.feedback-list__item,
+.service-list__item {
     position: relative;
     text-align: center;
 }
@@ -102,6 +100,7 @@ ul {
 
 .header__logo {
     box-sizing: border-box;
+/*    margin-right: auto;*/
     margin: 19px 17px;
 }
 
@@ -111,6 +110,8 @@ ul {
 
 .header-button__burger {
     display: block;
+    align-self: flex-start;
+    margin-right: auto;
     background: url(img/icons/burger.png) no-repeat;
 }
 
@@ -123,7 +124,7 @@ ul {
     background: #EAEAEA;
     border-radius: 1px;
     top: 28px;
-    right: -124px;
+    right: -128px;
 }
 
 .header-button__call {
@@ -151,7 +152,7 @@ ul {
     background: #EAEAEA;
     border-radius: 1px;
     top: 28px;
-    left: -10px;
+    left: -12px;
     display: none;
 }
 
@@ -220,10 +221,6 @@ ul {
     cursor: pointer;
 }
 
-/*.nav__item--reapairable-brends {
-    display: none;
-    }*/
-
 .nav__link {
     display: block;
     padding: 8px 20px;
@@ -268,15 +265,6 @@ ul {
     height: 90px;
     box-sizing: border-box;
 }
-
-/*.read-more:active + .text-inner {
-    height: 100%;
-}
-
-.read-more:active  {
-    display: none;
-    visibility: hidden;
-}*/
 
 .article-text-paragraph {
     display: inline-block;
@@ -354,8 +342,17 @@ ul {
         display: flex;
     }
     
+    .header-list__feedback {
+        margin-left: auto;
+    }
+    
+    .header-list__services {
+        margin-left: 0;
+    }
+    
+    
     .header__logo {
-        margin: 19px 25px;
+        margin: 19px 26px;
     }
     
     .logo__link:before {
@@ -367,7 +364,7 @@ ul {
     }
     
     .header-button__burger--divider:after {
-        right: -10px;
+        right: -15px;
         display: block;
     }
     
@@ -430,15 +427,6 @@ ul {
         background-color:transparent;
         border-bottom: transparent;
     }
-    
-/*    .header__buttons {
-        justify-content: flex-end;
-    }*/
-    
-/*    .service-list {
-        display: flex;
-        justify-content: flex-end;
-    }*/
 
     .header__buttons {
 
@@ -462,13 +450,19 @@ ul {
         display: block;
     }
     
-    .header__logo-section {
+    .header-button__burger--divider,
+    .header__logo {
         display: none;
+    }
+    
+    .header-list__services {
+        margin-left: auto;
     }
     
     .main-header__statusbar {
         display: block;
     }
+    
     .feedback-list {
         display: none;
     }
@@ -497,12 +491,7 @@ ul {
     
     .main__nav{
         flex-wrap: wrap;
-/*        justify-content: flex-start;*/
     }
-    
-/*    .nav__item--reapairable-brends {
-        display: block;
-    }*/
     
     /* ARTICLE */
     .article__content {
