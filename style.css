@@ -75,7 +75,7 @@ ul {
     text-align: center;
 }
     
-.header__button {
+.button {
     width: 40px;
     height: 40px;
     background: #FF3E79;
@@ -83,10 +83,15 @@ ul {
     cursor: pointer;
     border: 0;
     padding: 0;
+}
+
+.header__menu--button,
+.feedback-list__button,
+.service-list__button {
     margin: 24px 8px;
 }
 
-.header__button--inscription {
+.button--inscription {
     display: none;
 }
 
@@ -108,14 +113,14 @@ ul {
     display: none;
 }
 
-.header-button__burger {
+.button--burger {
     display: block;
     align-self: flex-start;
     margin-right: auto;
     background: url(img/icons/burger.png) no-repeat;
 }
 
-.header-button__burger--divider:after {
+.button--burger--divider:after {
     content: "";
     position: absolute;
     display: block;
@@ -127,23 +132,23 @@ ul {
     right: -128px;
 }
 
-.header-button__call {
+.button--call {
     background: url(img/icons/call.png) no-repeat;
 }
 
-.header-button__chat {
+.button--chat {
     background: url(img/icons/chat.png) no-repeat;
 }
 
-.header-button__profile {
+.button--profile {
     background: url(img/icons/profile.png) no-repeat;
 }
 
-.header-button__repair {
+.button--repair {
     background: url(img/icons/repair.png) no-repeat;
 }
 
-.header-button__repair--divider:before {
+.button--repair--divider:before {
     content: "";
     position: absolute;
     display: block;
@@ -156,7 +161,7 @@ ul {
     display: none;
 }
 
-.header-button__checkstatus {
+.button--checkstatus {
     background: url(img/icons/checkstatus.png) no-repeat;
 }
 
@@ -194,18 +199,18 @@ ul {
 
 /* NAV */
 
-.nav {
+.main__nav {
     overflow-y: scroll;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
 }
 
-.nav::-webkit-scrollbar {
+.main__nav::-webkit-scrollbar {
     width: 0px;  /* ширина scrollbar'a */ 
     background: transparent;   /*опционально  */}
 
 
-.main__nav {
+.nav__list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -363,12 +368,12 @@ ul {
         display: none;
     }
     
-    .header-button__burger--divider:after {
+    .button--burger--divider:after {
         right: -15px;
         display: block;
     }
     
-    .header-button__repair--divider:before {
+    .button--repair--divider:before {
         display: block;
     }
     
@@ -450,7 +455,7 @@ ul {
         display: block;
     }
     
-    .header-button__burger--divider,
+    .button--burger--divider,
     .header__logo {
         display: none;
     }
@@ -470,26 +475,26 @@ ul {
     .service-list {
 /*        flex-grow: 1;*/
     }
-    .header-button__repair--divider:before {
+    .button--repair--divider:before {
         display: none;
     }
     
     /* MAIN */
     
-      .header__button--contains-text {
+      .button--contains-text {
         width: auto;
         padding-right: 48px;
         background-position-x: right;
         white-space: nowrap;
     }
     
-    .header__button--inscription {
+    .button--inscription {
         display: block;
     }
     
     /* NAV */
     
-    .main__nav{
+    .nav__list{
         flex-wrap: wrap;
     }
     
