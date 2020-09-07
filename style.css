@@ -1,5 +1,5 @@
 /* 
-    Created on : 25 авг. 2020 г., 16:02:37
+    Created on : 25 пїЅпїЅпїЅ. 2020 пїЅ., 16:02:37
     Author     : StPalatinus
 */
 
@@ -41,9 +41,9 @@ ul {
     border-bottom: 1px solid #D9FFF5;
 }
 
-.header__title {
+/* .header__title {
     display: none;
-}
+} */
 
 .header__buttons {
     box-sizing: border-box;
@@ -206,8 +206,8 @@ ul {
 }
 
 .main__nav::-webkit-scrollbar {
-    width: 0px;  /* ширина scrollbar'a */ 
-    background: transparent;   /*опционально  */}
+    width: 0px;  /* пїЅпїЅпїЅпїЅпїЅпїЅ scrollbar'a */ 
+    background: transparent;   /*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  */}
 
 
 .nav__list {
@@ -437,11 +437,10 @@ ul {
 
     }
     
-    .main__title {
-        display: none;
-/*        flex-basis: 50%;
-        flex-grow: 1;
-        order: -1;*/
+    .title {
+        position: absolute;
+        top: 24px;
+        /* display: none; */
     }
     
     .main {
@@ -451,9 +450,9 @@ ul {
     
     /* HEADER */
     
-    .header__title {
+    /* .header__title {
         display: block;
-    }
+    } */
     
     .button--burger--divider,
     .header__logo {
@@ -461,7 +460,10 @@ ul {
     }
     
     .header-list__services {
-        margin-left: auto;
+        position: absolute;
+        right: 40px;
+        top: 24px;
+        /* margin-left: auto; */
     }
     
     .main-header__statusbar {
