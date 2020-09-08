@@ -1,5 +1,5 @@
 /* 
-    Created on : 25 авг. 2020 г., 16:02:37
+    Created on : 25 пїЅпїЅпїЅ. 2020 пїЅ., 16:02:37
     Author     : StPalatinus
 */
 
@@ -32,7 +32,7 @@ ul {
 
 .header {
     display: flex;
-/*    justify-content: space-between;*/
+/*    justify-content: space-between; */
     align-items: center;
     box-sizing: border-box;
     width: 100%;
@@ -41,17 +41,21 @@ ul {
     border-bottom: 1px solid #D9FFF5;
 }
 
+/*
 .header__title {
     display: none;
 }
+*/
 
+/*
 .header__buttons {
     box-sizing: border-box;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
-}
+} 
+*/
 
 .header__menu {
     position: relative;
@@ -76,13 +80,16 @@ ul {
 }
     
 .button {
+    display: block;
     width: 40px;
     height: 40px;
-    background: #FF3E79;
-    border-radius: 20px;
-    cursor: pointer;
     border: 0;
     padding: 0;
+    background: #FF3E79;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #1B1C21;
+    cursor: pointer;
 }
 
 .header__menu--button,
@@ -171,12 +178,15 @@ ul {
 
 .title {
     box-sizing: border-box;
-    padding-left: 24px;
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -0.6px;
     white-space: nowrap;
     color: #1B1C21;
+}
+
+.main__title {
+    padding-left: 24px;
 }
 
 /* MAIN */
@@ -203,11 +213,13 @@ ul {
     overflow-y: scroll;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
+    margin-left: 24px;
+    user-select: none;
 }
 
 .main__nav::-webkit-scrollbar {
-    width: 0px;  /* ширина scrollbar'a */ 
-    background: transparent;   /*опционально  */}
+    width: 0px;  /* пїЅпїЅпїЅпїЅпїЅпїЅ scrollbar'a */ 
+    background: transparent;   /*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  */}
 
 
 .nav__list {
@@ -217,7 +229,7 @@ ul {
     list-style: none;
 }
 
-.nav__item:not(:last-child) {
+.nav__list--item:not(:last-child) {
     box-sizing: content-box;
     white-space: nowrap;
     text-align: center;
@@ -226,7 +238,7 @@ ul {
     cursor: pointer;
 }
 
-.nav__link {
+.nav__list--link {
     display: block;
     padding: 8px 20px;
     text-decoration: none;
@@ -240,17 +252,17 @@ ul {
     outline: none;
 }
 
-.nav__link:hover,
-.nav__link:focus, 
-.nav__link:active,
-.nav__link--active {
+.nav__list--link:hover,
+.nav__list--link:focus, 
+.nav__list--link:active,
+.nav__list--link--active {
     border: 2px solid #B8FFEC;
     background: #FFFFFF;
 }
 
-.nav__item--reapirable-brends {
+/*.nav__list--item--reapirable-brends {
     display: none;
-}
+}*/
 
     /* ARTICLE */
     
@@ -265,17 +277,17 @@ ul {
     flex-direction:column;
 }
 
-.text-inner {
+.article__text--inner {
     overflow: hidden;
     height: 90px;
     box-sizing: border-box;
 }
 
-.article-text-paragraph {
+.article__text--paragraph {
     display: inline-block;
     padding-right: 16px;
     margin-bottom: 15px;
-    user-select: none;
+    user-select: contain;
 }
 
 .article {
@@ -294,6 +306,7 @@ ul {
     color: #1B1C21;
     border: none;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .article__read-more {
@@ -313,7 +326,7 @@ ul {
     flex-direction: column;
 }
 
-.article-text-paragraph {
+.article__text--paragraph {
     margin-left: 24px;
 }
 
@@ -333,7 +346,7 @@ ul {
 @media only screen and (min-width: 768px)  {
     
     .body {
-        
+        margin-right: 15px;;
     }
     
     /* HEADER */
@@ -347,7 +360,7 @@ ul {
         display: flex;
     }
     
-    .header-list__feedback {
+    .header__feedback-list {
         margin-left: auto;
     }
     
@@ -396,11 +409,11 @@ ul {
         padding-right: 48px;
     }
     
-    .text-inner {
+    .article__text--inner {
         height: 160px;
     }
     
-    .article-text-paragraph {
+    .article__text--paragraph {
         margin-left: 24px;
     }
     
@@ -438,7 +451,10 @@ ul {
     }
     
     .main__title {
-        display: none;
+        position: absolute;
+        top: 24px;
+        left: 0;
+        padding-left: 34px;
 /*        flex-basis: 50%;
         flex-grow: 1;
         order: -1;*/
@@ -461,7 +477,10 @@ ul {
     }
     
     .header-list__services {
-        margin-left: auto;
+        position: absolute;
+        /*margin-left: auto;*/
+        right: 32px;
+        top: 24px;
     }
     
     .main-header__statusbar {
@@ -478,10 +497,18 @@ ul {
     .button--repair--divider:before {
         display: none;
     }
+
+    /*
+    .service-list__button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    */
     
     /* MAIN */
     
-      .button--contains-text {
+    .button--contains-text {
         width: auto;
         padding-right: 48px;
         background-position-x: right;
@@ -489,12 +516,20 @@ ul {
     }
     
     .button--inscription {
-        display: block;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 7px;
+        font-size: 16px;
+        line-height: 24px;
     }
     
     /* NAV */
+
+    .main__nav {
+        margin-left: 0;
+    }
     
-    .nav__list{
+    .nav__list{ 
         flex-wrap: wrap;
     }
     
@@ -504,15 +539,15 @@ ul {
     }
     
     .article__text {
-        padding-right: 36px;    
+        padding-right: 36px;
     }
     
-    .text-inner {
+    .article__text--inner {
         height: 160px;
     }
     
-    .article-text-paragraph {
-        margin-left: 24px;
+    .article__text--paragraph {
+        margin-left: 0;
     }
     
     .article__image {

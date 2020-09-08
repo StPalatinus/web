@@ -13,10 +13,10 @@ and open the template in the editor.
     </head>
     <body class="body">
         <header class="header">
-            <h1 class="title header__title">Услуги и сервиы</h1>
             <!--<div class="header__logo-section">-->
                 <div class="header__menu button--burger--divider">
-                    <button type="button" class="header__menu--button button button--burger"></button>
+                    <button type="button" 
+                            class="header__menu--button button button--burger"></button>
                 </div>
                 <div class="logo header__logo">
                     <a class="logo__link" href="#">
@@ -25,7 +25,7 @@ and open the template in the editor.
                 </div>
             <!--</div>-->
             <!--<div class="header__buttons">-->
-                <ul class="feedback-list header-list__feedback">
+                <ul class="feedback-list header__feedback-list">
                     <li class="feedback-list__item">
                         <button type="button" class="feedback-list__button button button--call"></button>
                     </li>
@@ -33,49 +33,50 @@ and open the template in the editor.
                         <button type="button" class="feedback-list__button button button--chat"></button>
                     </li>
                     <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--profile"></button>
+                        <!--<button type="button" class="feedback-list__button button button--profile"></button>-->
+                        <a href="#" class="feedback-list__button button button--profile"></a>
                     </li>
                 </ul>
                 <ul class="service-list header-list__services">
                     <li class="service-list__item button--repair--divider">
-                        <button type="button" class="service-list__button
-                                                    button 
-                                                    button--contains-text
-                                                    button--repair"><span class="button--inscription">Оставьте заявку</span></button>
+                        <a href="#" class="service-list__button
+                                            button 
+                                            button--contains-text
+                                            button--repair"><span class="button--inscription">Оставьте заявку</span></a>
                     </li>
                     <li class="service-list__item">
-                        <button type="button" class="service-list__button
-                                                    button 
-                                                    button--contains-text
-                                                    button--checkstatus"><span class="button--inscription">Статус ремонта</span></button>
+                        <a href="#" class="service-list__button
+                                            button 
+                                            button--contains-text
+                                            button--checkstatus"><span class="button--inscription">Статус ремонта</span></a>
                     </li>
                 </ul>
             <!--</div>-->
         </header>
         <main class="main">
-                <h1 class="title main__title">Услуги и сервиы</h1>
+                <h1 class="title main__title">Услуги и сервисы</h1>
             <nav class="main__nav">
                 <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link nav__link--active">Ремонтируемые бренды</a>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav__list--link nav__list--link--active">Ремонтируемые бренды</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Ремонтируемые устройства</a>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav__list--link">Ремонтируемые устройства</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Дополнительный услуги</a>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav__list--link">Дополнительный услуги</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Цены на услуги</a>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav__list--link">Цены на услуги</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Адреса сервисных центров</a>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav__list--link">Адреса сервисных центров</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Специальные цены</a>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav__list--link">Специальные цены</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Отзывы</a>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav__list--link">Отзывы</a>
                     </li>
                 </ul>
             </nav>
@@ -83,11 +84,11 @@ and open the template in the editor.
                 <h2 class="visually-hidden">Официальный сервис центр Dell. Статья "О нас"</h2>
                 <div class="article__content">
                     <div class="article__text">
-                        <div class="text-inner">
-                            <p class="article-text-paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
+                        <div class="article__text--inner">
+                            <p class="article__text--paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
                                 Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
                             </p>
-                            <p class="article-text-paragraph">
+                            <p class="article__text--paragraph">
                                 Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, 
                                 что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
                                 что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
