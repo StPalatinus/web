@@ -113,6 +113,7 @@ ul {
 
 .button--inscription {
     display: none;
+    user-select: none;
     cursor: pointer;
 }
 
@@ -202,6 +203,7 @@ ul {
 
 .main__title {
     padding-left: 24px;
+    user-select: none;
 }
 
 /* MAIN */
