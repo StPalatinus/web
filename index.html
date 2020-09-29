@@ -112,32 +112,78 @@ and open the template in the editor.
                 </div>
             </article>
         </main>
-<!--  MOBILE MENU  -->
-        <nav class="mobile-menu">
-            <header class="mobile-menu__header">mobile-menu__header</header>
-            <nav class="mobile-menu__navbar">mobile-menu__navbar</nav>
-            <footer class="mobile-menu__footer">
-                <ul class="feedback-list mobile-menu__feedback-list">
-                    <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--call"></button>
-                    </li>
-                    <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--chat"></button>
-                    </li>
-                    <li class="feedback-list__item">
-                        <a href="#" class="feedback-list__button button button--profile"></a>
-                    </li>
-                </ul>
-                <div class="contacts mobile-menu__contacts">
-                    <a href="mailto:mail@cps.com?subject=временный текст">mail@cps.com</a>
-                    <a href="tel:8 800 890 8900">8 800 890 8900</a>
-                    <ul class="nav__list _list__lenselect">
-                        <li class="lenselect__len--ru nav__list--item">ru</li>
-                        <li class="lenselect__len--en nav__list--item">en</li>
-                        <li class="lenselect__len--ch nav__list--item">ch</li>
-                    </ul>
-                </div>
-            </footer>
+           <!--  MOBILE MENU  -->
+    <nav class="mobile-menu mobile-menu--visible">
+        <header class="mobile-menu__header">
+            <div class="mobile-menu__item">
+                <button type="button" 
+                        class="mobile__menu--button button button--close"></button>
+            </div>
+            <div class="logo mobile-menu__item--logo">
+                <a class="logo__link" href="#">
+                    <img class="logo__img" src="img/logo/csp_logo.png" alt="логотип компании">
+                </a>
+            </div>
+            <div class="mobile-menu__item">
+                <button type="button" 
+                        class="mobile__menu--button button button--search"></button>
+            </div>
+        </header>
+        <nav class="mobile-menu__navbar">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__list--item">
+                    <a href="" class="mobile-menu__list--link 
+                                      mobile-menu__list--link--active">Ремонт техники</a>
+                </li>
+                <li class="mobile-menu__list--item">
+                    <a href="" class="mobile-menu__list--link">Услуги и сервисы</a>
+                </li>
+                <li class="mobile-menu__list--item">
+                    <a href="" class="mobile-menu__list--link">Корпоративным клиентам</a>
+                </li>
+                <li class="mobile-menu__list--item">
+                    <a href="" class="mobile-menu__list--link">Продавцам техники</a>
+                </li>
+                <li class="mobile-menu__list--item">
+                    <a href="" class="mobile-menu__list--link">Партнерам</a>
+                </li>
+                <li class="mobile-menu__list--item">
+                    <a href="" class="mobile-menu__list--link">Производителям</a>
+                </li>
+                <li class="mobile-menu__list--item">
+                    <a href="" class="mobile-menu__list--link">Наши сервисные центры</a>
+                </li>
+                <li class="mobile-menu__list--item">
+                    <a href="" class="mobile-menu__list--link">Контакты</a>
+                </li>
+            </ul>
         </nav>
+        <footer class="mobile-menu__footer">
+            <ul class="feedback-list mobile-menu__feedback-list">
+                <li class="feedback-list__item">
+                    <button type="button" class="feedback-list__button button button--call"></button>
+                </li>
+                <li class="feedback-list__item">
+                    <button type="button" class="feedback-list__button button button--chat"></button>
+                </li>
+                <li class="feedback-list__item">
+                    <a href="#" class="feedback-list__button button button--profile"></a>
+                </li>
+            </ul>
+            <div class="contacts mobile-menu__contacts">
+                <a class="mobile-menu__email" href="mailto:mail@cps.com?subject=временный текст">
+                    <b>mail@cps.com</b>
+                </a>
+                <a class="mobile-menu__phone" href="tel:8 800 890 8900">
+                    <b>8 800 890 8900</b>
+                </a>
+                <ul class="nav__list lenselect mobile-menu__lenselect">
+                    <li class="nav__list--item lenselect__len lenselect__len--selected">ru</li>
+                    <li class="nav__list--item lenselect__len">en</li>
+                    <li class="nav__list--item lenselect__len">ch</li>
+                </ul>
+            </div>
+        </footer>
+    </nav>
     </body>
 </html>
