@@ -16,7 +16,8 @@ and open the template in the editor.
             <!--<div class="header__logo-section">-->
                 <div class="header__menu button--burger--divider">
                     <button type="button" 
-                            class="header__menu--button button button--burger"></button>
+                            class="header__menu--button button button--burger"
+                            aria-label="Меню"></button>
                 </div>
                 <div class="logo header__logo">
                     <a class="logo__link" href="#">
@@ -27,14 +28,18 @@ and open the template in the editor.
             <!--<div class="header__buttons">-->
                 <ul class="feedback-list header__feedback-list">
                     <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--call"></button>
+                        <button type="button" 
+                                class="feedback-list__button button button--call"
+                                aria-label="Позвонить"></button>
                     </li>
                     <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--chat"></button>
+                        <button type="button" 
+                                class="feedback-list__button button button--chat"
+                                aria-label="Чат"></button>
                     </li>
                     <li class="feedback-list__item">
-                        <!--<button type="button" class="feedback-list__button button button--profile"></button>-->
-                        <a href="#" class="feedback-list__button button button--profile"></a>
+                        <a href="#" class="feedback-list__button button button--profile"
+                           aria-label="Профиль"></a>
                     </li>
                 </ul>
                 <ul class="service-list header-list__services">
@@ -112,79 +117,99 @@ and open the template in the editor.
                 </div>
             </article>
         </main>
-           <!--  MOBILE MENU  -->
-        <nav class="mobile-menu mobile-menu--visible">
+    <!--  MOBILE MENU  -->
+        <aside class="mobile-menu mobile-menu--visible">
             <header class="mobile-menu__header">
-                <div class="mobile-menu__item">
-                    <button type="button" 
-                            class="mobile__menu--button button button--close"></button>
-                </div>
-                <div class="logo mobile-menu__item--logo">
-                    <a class="logo__link" href="#">
+                    <button type="button" tabindex="1" autofocus
+                            class="mobile-menu__button button button--close"
+                            aria-label="Закрыть меню"></button>
+                <div class="logo mobile-menu__logo">
+                    <a class="logo__link" href="#" tabindex="1">
                         <img class="logo__img" src="img/logo/csp_logo.png" alt="логотип компании">
                     </a>
                 </div>
-                <div class="mobile-menu__item">
-                    <button type="button" 
-                            class="mobile__menu--button button button--search"></button>
-                </div>
+                    <button type="button" tabindex="1"
+                            class="mobile-menu__button button button--search"
+                            aria-label="Поиск"></button>
             </header>
             <nav class="mobile-menu__navbar">
                 <ul class="mobile-menu__list">
                     <li class="mobile-menu__list--item">
-                        <a href="" class="mobile-menu__list--link 
+                        <a href="" tabindex="1"
+                                   class="mobile-menu__list--link 
                                           mobile-menu__list--link--active">Ремонт техники</a>
                     </li>
                     <li class="mobile-menu__list--item">
-                        <a href="" class="mobile-menu__list--link">Услуги и сервисы</a>
+                        <a href="" tabindex="1" class="mobile-menu__list--link">Услуги и сервисы</a>
                     </li>
                     <li class="mobile-menu__list--item">
-                        <a href="" class="mobile-menu__list--link">Корпоративным клиентам</a>
+                        <a href="" tabindex="1" class="mobile-menu__list--link">Корпоративным клиентам</a>
                     </li>
                     <li class="mobile-menu__list--item">
-                        <a href="" class="mobile-menu__list--link">Продавцам техники</a>
+                        <a href="" tabindex="1" class="mobile-menu__list--link">Продавцам техники</a>
                     </li>
                     <li class="mobile-menu__list--item">
-                        <a href="" class="mobile-menu__list--link">Партнерам</a>
+                        <a href="" tabindex="1" class="mobile-menu__list--link">Партнерам</a>
                     </li>
                     <li class="mobile-menu__list--item">
-                        <a href="" class="mobile-menu__list--link">Производителям</a>
+                        <a href="" tabindex="1" class="mobile-menu__list--link">Производителям</a>
                     </li>
                     <li class="mobile-menu__list--item">
-                        <a href="" class="mobile-menu__list--link">Наши сервисные центры</a>
+                        <a href="" tabindex="1" class="mobile-menu__list--link">Наши сервисные центры</a>
                     </li>
                     <li class="mobile-menu__list--item">
-                        <a href="" class="mobile-menu__list--link">Контакты</a>
+                        <a href="" tabindex="1" class="mobile-menu__list--link">Контакты</a>
                     </li>
                 </ul>
             </nav>
             <footer class="mobile-menu__footer">
                 <ul class="feedback-list mobile-menu__feedback-list">
                     <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--call"></button>
+                        <button type="button" tabindex="1" 
+                                class="feedback-list__button button button--call"
+                                aria-label="Позвонитьк"></button>
                     </li>
                     <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--chat"></button>
+                        <button type="button" tabindex="1" 
+                                class="feedback-list__button button button--chat"
+                                aria-label="Чат"></button>
                     </li>
                     <li class="feedback-list__item">
-                        <a href="#" class="feedback-list__button button button--profile"></a>
+                        <a href="#" tabindex="1" 
+                           class="feedback-list__button button button--profile"
+                           aria-label="Профиль"></a>
                     </li>
                 </ul>
                 <div class="contacts mobile-menu__contacts">
-                    <a class="mobile-menu__email" href="mailto:mail@cps.com?subject=временный текст">
+                    <a class="mobile-menu__email" href="mailto:mail@cps.com?subject=временный текст" tabindex="1">
                         <b>mail@cps.com</b>
                     </a>
-                    <a class="mobile-menu__phone" href="tel:8 800 890 8900">
+                    <a class="mobile-menu__phone" href="tel:8 800 890 8900" tabindex="1">
                         <b>8 800 890 8900</b>
                     </a>
                     <ul class="nav__list lenselect mobile-menu__lenselect">
-                        <li class="nav__list--item lenselect__len lenselect__len--selected">ru</li>
-                        <li class="nav__list--item lenselect__len">en</li>
-                        <li class="nav__list--item lenselect__len">ch</li>
+                        <li class="nav__list--item lenselect__len">
+                            <button type="button" 
+                                    class="lenselect__button lenselect__button--selected" 
+                                    tabindex="1"
+                                    aria-label="Русскийк">ru</button>
+                        </li>
+                        <li class="nav__list--item lenselect__len">
+                            <button type="button" 
+                                    class="lenselect__button" 
+                                    tabindex="1"
+                                    aria-label="English">en</button>
+                        </li>
+                        <li class="nav__list--item lenselect__len">
+                            <button type="button" 
+                                    class="lenselect__button" 
+                                    tabindex="1"
+                                    aria-label="汉语">ch</button>
+                        </li>
                     </ul>
                 </div>
             </footer>
-        </nav>
+        </aside>
         <div class="cover"></div>
     </body>
 </html>
