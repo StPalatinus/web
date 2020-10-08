@@ -337,7 +337,6 @@ ul {
     display: block;
     position: absolute;
     content: url("./img/icons/continue_read_icon.png");
-/*    background: url(img/icons/continue_read_icon.png) no-repeat;*/
 }
 
 .read-more:hover {
