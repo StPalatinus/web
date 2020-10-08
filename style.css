@@ -363,7 +363,35 @@ ul {
 .article__picture {
     
 }
+/* BRANDS */
 
+.brands {}
+
+.brands__header {
+    margin: 16px;
+}
+
+.brands__container {
+    padding: 16px;
+    text-align: justify;
+    -moz-text-align-last: justify;
+     text-align-last: justify;
+}
+
+.brands__thumbnail {
+    display: inline-block;
+    width: 240px;
+    height: 72px;
+    background-color: #FFFFFF;
+}
+
+.brands__container::after {
+    content: "i i i i i i i i i i i i i i i i";
+    background-color: transparent;
+    word-spacing: 97px;
+    padding-left: 97px;
+    /*visibility: hidden;*/
+}
 
 @media only screen and (min-width: 768px)  {
     
@@ -575,6 +603,22 @@ ul {
     
     .article__image {
         min-width: 532px;
+    }
+    
+    /* BRANDS */
+
+    .brands {}
+
+    .brands__header {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .brands__container {
+        padding: 0;
+        text-align: justify;
+        -moz-text-align-last: justify;
+        text-align-last: justify;
     }
 }
 
