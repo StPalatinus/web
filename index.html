@@ -12,121 +12,21 @@ and open the template in the editor.
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="body">
-        <header class="header">
-            <!--<div class="header__logo-section">-->
-                <div class="header__menu button--burger--divider">
-                    <button type="button" 
-                            class="header__menu--button button button--burger"></button>
-                </div>
-                <div class="logo header__logo">
-                    <a class="logo__link" href="#">
-                        <img class="logo__img" src="img/logo/csp_logo.png" alt="логотип компании">
-                    </a>
-                </div>
-            <!--</div>-->
-            <!--<div class="header__buttons">-->
-                <ul class="feedback-list header__feedback-list">
-                    <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--call"></button>
-                    </li>
-                    <li class="feedback-list__item">
-                        <button type="button" class="feedback-list__button button button--chat"></button>
-                    </li>
-                    <li class="feedback-list__item">
-                        <!--<button type="button" class="feedback-list__button button button--profile"></button>-->
-                        <a href="#" class="feedback-list__button button button--profile"></a>
-                    </li>
-                </ul>
-                <ul class="service-list header-list__services">
-                    <li class="service-list__item button--repair--divider">
-                        <label for="btn-repair" class="button--inscription">
-                            Оставьте заявку
-                        </label>
-                        <a href="#" id="btn-repair" class="service-list__button
-                                                            button 
-                                                            button--contains-text
-                                                            button--repair">
-                        </a>
-                    </li>
-                    <li class="service-list__item">
-                        <label for="btn-checkstatus" class="button--inscription">
-                            Статус ремонта
-                        </label>
-                        <a href="#" id="btn-checkstatus" class="service-list__button
-                                                                button 
-                                                                button--contains-text
-                                                                button--checkstatus">
-                        </a>
-                    </li>
-                </ul>
-        </header>
-        <main class="main">
-                <h1 class="title main__title">Услуги и сервисы</h1>
-            <nav class="main__nav">
-                <ul class="nav__list">
-                    <li class="nav__list--item">
-                        <a href="#" class="nav__list--link nav__list--link--active">Ремонтируемые бренды</a>
-                    </li>
-                    <li class="nav__list--item">
-                        <a href="#" class="nav__list--link">Ремонтируемые устройства</a>
-                    </li>
-                    <li class="nav__list--item">
-                        <a href="#" class="nav__list--link">Дополнительный услуги</a>
-                    </li>
-                    <li class="nav__list--item">
-                        <a href="#" class="nav__list--link">Цены на услуги</a>
-                    </li>
-                    <li class="nav__list--item">
-                        <a href="#" class="nav__list--link">Адреса сервисных центров</a>
-                    </li>
-                    <li class="nav__list--item">
-                        <a href="#" class="nav__list--link">Специальные цены</a>
-                    </li>
-                    <li class="nav__list--item">
-                        <a href="#" class="nav__list--link">Отзывы</a>
-                    </li>
-                </ul>
-            </nav>
-            <article class="article">
-                <h2 class="visually-hidden">Официальный сервис центр Dell. Статья "О нас"</h2>
-                <div class="article__content">
-                    <div class="article__text">
-                        <div class="article__text--inner">
-                            <p class="article__text--paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
-                                Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                            </p>
-                            <p class="article__text--paragraph">
-                                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, 
-                                что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
-                                что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-                            </p>
-                        </div>
-                        <button type="button" class="read-more article__read-more">Читать далее</button>
-                    </div>
-                    <picture class="article__picture">
-                        <source class="article__image" media="(min-width: 1120px)" srcset="./img/content/logo_lg.png">
-                        <source class="article__image" media="(min-width: 768px)" srcset="./img/content/logo_sm.png">
-                        <source class="article__image" media="(min-width: 1px)" srcset="./img/content/logo_xs.png">
-                        <img class="article__image" src="./img/content/logo_lg.png" alt="Логотип компании"/>
-                    </picture>
-                </div>
-            </article>
-            <section class="brands">
-                <h2 class="brands__header">Ремонт техники различных брендов</h2>
-                <div class="brands__container">
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                    <div class="brands__thumbnail"></div>
-                </div>
-            </section>
-        </main>
+        <section class="brands">
+            <h2 class="brands__header">Ремонт техники различных брендов</h2>
+            <ul class="brands__container">
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+                <li class="brands__thumbnail"></li>
+            </ul>
+        </section>
     </body>
 </html>
