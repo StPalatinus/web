@@ -230,7 +230,7 @@ ul {
 /* NAV */
 
 .main__nav {
-    overflow-y: scroll;
+    overflow-y: auto;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
     margin-left: 24px;
