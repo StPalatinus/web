@@ -58,15 +58,19 @@ ul {
     column-gap: 16px;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 72px;
+}
+
 .brands__thumbnail {
     position: relative;
     display: block;
-    flex-basis: 240px;
-    min-width: 240px;
+    flex-basis: 100%;
+/*    min-width: 240px;*/
     height: 72px;
     background-color: #FFFFFF;
     box-sizing: border-box;
-    border: 1px solid black;
 }
 
 .brands--button {
@@ -76,6 +80,12 @@ ul {
     transition: background-color 0.3s ease-in-out;
     top: 16px;
     right: 16px;
+}
+
+.brands__thumbnail:active, 
+.brands__thumbnail:hover,
+.brands__thumbnail:focus {
+    outline: none;
 }
 
 .brands--button:after {
@@ -92,18 +102,25 @@ ul {
 /*    transform: rotate(-45deg);*/
 }
 
-.brands--button:hover,
-.brands--button:focus {
+.brands__thumbnail:hover .brands--button,
+.brands__thumbnail:focus .brands--button,
+.brands__thumbnail:active .brands--button {
     background-color: aqua;
     opacity: 0.5;
     outline:none;
 }
 
-.brands--button:active:after  {
+.brands__thumbnail:active .brands--button:after  {
     transform-origin: center;
     transform: translate(-4px, -4px) rotate(-45deg);
     opacity: 0.7;
 }
+    
+/*.brands--button:active:after  {
+    transform-origin: center;
+    transform: translate(-4px, -4px) rotate(-45deg);
+    opacity: 0.7;
+}*/
 
 .brands__thumbnail--lenovo {
     background-image: url(img/goods/lenovo.svg);
