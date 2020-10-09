@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "web_project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StPalatinus/web.git"
+  },
+  "author": "StPalatinus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StPalatinus/web/issues"
+  },
+  "homepage": "https://github.com/StPalatinus/web#readme",
+  "dependencies": {
+    "swiper": "^6.3.2"
+  }
+}
