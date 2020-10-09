@@ -109,49 +109,56 @@ ul {
     background-image: url(img/goods/lenovo.svg);
     background-repeat: no-repeat;
     background-position: 16px 50%;
+    background-color: #FFFFFF;
 }
 
 .brands__thumbnail--samsung {
     background-image: url(img/goods/samsung.svg);
     background-repeat: no-repeat;
     background-position: 16px 50%;
+    background-color: #FFFFFF;
 }
 
 .brands__thumbnail--apple {
-    /*background: url(img/goods/apple.svg) no-repeat;*/
     background-image: url(img/goods/apple.svg);
     background-repeat: no-repeat;
     background-position: 16px 50%;
+    background-color: #FFFFFF;
 }
 
 .brands__thumbnail--viewsonic {
     background-image: url(img/goods/viewsonic.svg);
     background-position: 16px 50%;
     background-repeat: no-repeat;
+    background-color: #FFFFFF;
 }
 
 .brands__thumbnail--bosch {
     background: url(img/goods/bosch.svg);
     background-position: 16px 50%;
     background-repeat: no-repeat;
+    background-color: #FFFFFF;
 }
 
 .brands__thumbnail--hp {
     background: url(img/goods/hp.svg);
     background-position: 16px 50%;
     background-repeat: no-repeat;
+    background-color: #FFFFFF;
 }
 
 .brands__thumbnail--acer {
     background: url(img/goods/acer.svg);
     background-position: 16px 50%;
     background-repeat: no-repeat;
+    background-color: #FFFFFF;
 }
 
 .brands__thumbnail--sony {
     background: url(img/goods/sony.svg);
     background-position: 16px 50%;
     background-repeat: no-repeat;
+    background-color: #FFFFFF;
 }
 
 @media only screen and (min-width: 768px)  {

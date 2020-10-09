@@ -8,69 +8,83 @@ and open the template in the editor.
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1 user-scalable=no">
         <link rel="stylesheet" href="brands_style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.css">
     </head>
     <body class="body">
-        <section class="brands">
+        <section class="brands swiper-container">
             <h2 class="brands__header">Ремонт техники различных брендов</h2>
-            <ul class="brands__container">
-                <li class="brands__thumbnail brands__button brands__thumbnail--lenovo">
+            <div class="swiper-container">
+            <div class="brands__container swiper-wrapper">
+                <div class="brands__thumbnail brands__button brands__thumbnail--lenovo">
                     <button type="button"
                             class="button brands--button"
                             aria-label="lenovo"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--samsung">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--samsung">
                     <button type="button"
                             class="button brands--button"
                             aria-label="samsung"></button>
-                </li>
-                 <li class="brands__thumbnail brands__thumbnail--apple">
+                </div>
+                 <div class="brands__thumbnail brands__thumbnail--apple">
                     <button type="button"
                             class="button brands--button"
                             aria-label="apple"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--viewsonic">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--viewsonic">
                     <button type="button"
                             class="button brands--button"
                             aria-label="viewsonic"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--bosch">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--bosch">
                     <button type="button"
                             class="button brands--button"
                             aria-label="bosch"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--hp">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--hp">
                     <button type="button"
                             class="button brands--button"
                             aria-label="hp"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--acer">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--acer">
                     <button type="button"
                             class="button brands--button"
                             aria-label="acer"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--sony">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--sony">
                     <button type="button"
                             class="button brands--button"
                             aria-label="sony"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--lenovo">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--lenovo">
                     <button type="button"
                             class="button brands--button"
                             aria-label="lenovo"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--samsung">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--samsung">
                     <button type="button"
                             class="button brands--button"
                             aria-label="samsung"></button>
-                </li>
-                <li class="brands__thumbnail brands__button brands__thumbnail--apple">
+                </div>
+                <div class="brands__thumbnail brands__button brands__thumbnail--apple">
                     <button type="button"
                             class="button brands--button"
                             aria-label="apple"></button>
-                </li>
-            </ul>
+                </div>
+            </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <!--<script src="scrypt/swiperhandler.js"></script>-->
+    <!--<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>-->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+    </script>
     </body>
 </html>
