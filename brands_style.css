@@ -1,0 +1,223 @@
+/* 
+    Created on : 25 ���. 2020 �., 16:02:37
+    Author     : StPalatinus
+*/
+
+@import "fonts/stylesheet.css";
+
+html {
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    /*background-color: #F8F8F8;*/
+    background-color: #F2F2F2;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+/*    display: flex;*/
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 8px;
+    overflow: hidden;
+    font-family: "TT Lakes", sans-serif; 
+    background-color: #F2F2F2;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+}
+
+/* BRANDS */
+
+.brands {
+    box-sizing: border-box;
+}
+
+.brands__header {
+}
+
+.brands__container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: flex-start;
+    column-gap: 16px;
+}
+
+.brands__thumbnail {
+    position: relative;
+    display: block;
+    flex-basis: 240px;
+    min-width: 240px;
+    height: 72px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.brands--button {
+    position: absolute;
+    border: 1px solid #FF3E79;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+    top: 16px;
+    right: 16px;
+}
+
+.brands--button:after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid #FF3E79;
+    border-right: none;
+    border-bottom: none;
+    transform-origin: center;
+    transform: translate(-3px, -4px) rotate(-45deg);
+    outline: none;
+/*    transform: rotate(-45deg);*/
+}
+
+.brands--button:hover,
+.brands--button:focus {
+    background-color: aqua;
+    opacity: 0.5;
+    outline:none;
+}
+
+.brands--button:active:after  {
+    transform-origin: center;
+    transform: translate(-4px, -4px) rotate(-45deg);
+    opacity: 0.7;
+    /*transform: scale(1.5);*/
+}
+
+.brands__thumbnail--lenovo {
+    background-image: url(img/goods/lenovo.svg);
+    background-repeat: no-repeat;
+    background-position: 16px 50%;
+}
+
+.brands__thumbnail--samsung {
+    background-image: url(img/goods/samsung.svg);
+    background-repeat: no-repeat;
+    background-position: 16px 50%;
+}
+
+.brands__thumbnail--apple {
+    /*background: url(img/goods/apple.svg) no-repeat;*/
+    background-image: url(img/goods/apple.svg);
+    background-repeat: no-repeat;
+    background-position: 16px 50%;
+}
+
+.brands__thumbnail--viewsonic {
+    background-image: url(img/goods/viewsonic.svg);
+    background-position: 16px 50%;
+    background-repeat: no-repeat;
+}
+
+.brands__thumbnail--bosch {
+    background: url(img/goods/bosch.svg);
+    background-position: 16px 50%;
+    background-repeat: no-repeat;
+}
+
+.brands__thumbnail--hp {
+    background: url(img/goods/hp.svg);
+    background-position: 16px 50%;
+    background-repeat: no-repeat;
+}
+
+.brands__thumbnail--acer {
+    background: url(img/goods/acer.svg);
+    background-position: 16px 50%;
+    background-repeat: no-repeat;
+}
+
+.brands__thumbnail--sony {
+    background: url(img/goods/sony.svg);
+    background-position: 16px 50%;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px)  {
+    
+    .body {
+        margin: 0 auto;
+        max-width: 768px;
+}
+        
+    /* BRANDS */
+    
+    .brands__container {
+        flex-wrap: wrap;
+/*        justify-content: space-around;*/
+        row-gap: 16px;
+        column-gap: 32px;
+        margin-left: 16px;
+/*        margin-bottom: 8px;*/
+    }
+
+    .brands__thumbnail {
+        box-sizing: border-box;
+        flex-basis: 224px;
+        min-width: 224px;
+        flex-basis: calc((100% / 3) - 96px);
+        flex-shrink: 1;
+        /*flex-grow: 1;*/
+    }
+    
+}
+
+@media only screen and (min-width: 1120px)  {
+    
+    .body {
+        margin: 0 auto;
+        max-width: 1120px;
+    }
+    
+    /* BRANDS */
+
+    .brands {
+    }
+
+    .brands__header {
+    }
+    
+    .brands__container {
+        margin-left: 32px;
+    }
+    
+    .brands__thumbnail {
+        min-width: 240px;
+        flex-basis: calc((100% / 4) - 96px);
+        box-sizing: border-box;
+    }
+}
+
+    /* GENERAL */
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
