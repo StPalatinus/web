@@ -1,11 +1,13 @@
   'use strict';
   window.onload = function() {
-        
+
+// remove swiper classes on higher resolutions
+      
     function toggleSwiperClasses(action) {
-        let brandsSwiperContainer = document.querySelector('.brands__swiper-container');
-        let brandsContainer = document.querySelector('.brands__container');
-        let brands = brandsContainer.querySelectorAll('.brands__thumbnail');
-        let brandsPaginatopn = document.querySelector('.brands__pagination');
+        const brandsSwiperContainer = document.querySelector('.brands__swiper-container');
+        const brandsContainer = document.querySelector('.brands__container');
+        const brands = brandsContainer.querySelectorAll('.brands__thumbnail');
+        const brandsPaginatopn = document.querySelector('.brands__pagination');
         
         if(action === ("remove") && brandsSwiperContainer.classList.contains('swiper-container')){
             brandsSwiperContainer.classList.remove('swiper-container');
@@ -66,28 +68,22 @@
   const enableSwiper = function() {
 
     mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        effect: 'slide',
-        updateOnWindowResize: true,
-        preventClicksPropagation: true,
-        loop: true,
+    // Optional parameters
+    direction: 'horizontal',
+    effect: 'slide',
+    updateOnWindowResize: true,
+    preventClicksPropagation: true,
+    loop: true,
+    initialSlide: 0,
+    spaceBetween: 16,
+//        centeredSlides: true,
+    slidesOffsetBefore: 16,
+    slidesOffsetAfter: 16,
+    slidesPerView: 'auto',
     
-    
-//    slidesPerView: 'auto',
-//  preloadImages: true,
-//  updateOnImagesReady: true,
-  
-//  freeMode:true,
-//  noSwipingClass: 'brands__thumbnail--apple',
-//  shortSwipes: false,
-//  longSwipes: false,
-//  grabCursor: true,
-//  spaceBetween: 15,
-  //  loop: true,
-//  initialSlide:	2,
-//  speed: 300,
-//  autoplay : 95000,
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
 
     autoplay: {
         delay: 5500,
@@ -100,7 +96,7 @@
         effect : 'fade',
     //    hideOnClick: true,
         clickable: true,
-      },
+    },
 
     keyboard: {
         enabled: true,
@@ -109,7 +105,7 @@
         
     mousewheel: {
         invert: true,
-      },
+    },
 });
 
 //    mySwiper.slideNext();

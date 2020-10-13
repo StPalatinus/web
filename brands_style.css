@@ -8,11 +8,10 @@
 html {
     font-size: 14px;
     line-height: 20px;
-    /* or 143% */
     letter-spacing: 0.2px;
     color: #1B1C21;
-    /*background-color: #F8F8F8;*/
     background-color: #F2F2F2;
+    overflow-y: auto;
 }
 
 ul {
@@ -21,21 +20,12 @@ ul {
 }
 
 .body {
-/*    display: flex;*/
-    flex-direction: column;
-    min-height: 100vh;
-    padding-bottom: 8px;
+/*    min-height: 100vh;*/
+    padding-bottom: 16px;
     font-family: "TT Lakes", sans-serif; 
     background-color: #F2F2F2;
     margin: 0;
     overflow-y: auto;
-}
-
-.button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
 }
 
 /* BRANDS */
@@ -51,37 +41,41 @@ ul {
     margin-right: 16px;*/
 }
 
+.brands__swiper-container {
+    height: 100%;
+/*    width: 240px;*/
+}
+
 .brands__container {
     display: flex;
+/*    height: 100%;*/
+    width: 100%;
     flex-wrap: nowrap;
-/*    overflow-x: auto;*/
     flex-direction: row;
-    /*width: 100%;*/
     box-sizing: border-box;
     align-items: flex-start;
-/*    column-gap: 16px;*/
 }
 
 .swiper-container {
-  height: 72px;
-  box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    height: 72px;
+    box-sizing: border-box; 
 }
 
 .swiper-slide {
-    width: 100%;
+    /*    width: 100%;*/
 }
 
 .swiper-pagination {
-/*    display: block;
     position: relative;
-    background-color: red;
-    bottom: 20px;*/
+    transform: translateY(16px);
+    letter-spacing: 10px;
 }
 
 div .brands__pagination {
     position: absolute;
     outline: none;
-    transform: translateY(100px);
 }
 
 .swiper-pagination-bullet {
@@ -94,7 +88,9 @@ div .brands__pagination {
     opacity: 1;
     background: #DDDDDD;
     outline: none;
-
+    margin-left: 6px;
+    margin-right: 6px;
+    text-align: center;
 }
 
 .swiper-pagination-bullet-active {
@@ -107,32 +103,36 @@ div .brands__pagination {
     position: relative;
     display: block;
     flex-basis: calc(100% - 32px);
-/*    min-width: 240px;*/
+    flex-basis: 240px;
     height: 72px;
     background-color: #FFFFFF;
-    margin-left: 16px;
-    margin-right: 16px;
+/*    margin-left: 16px;
+    margin-right: 16px;*/
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     border-radius: 6px; 
 }
 
-.brands--button {
+.brand__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin-left: 16px;
+}
+
+.brand__link:after {
     position: absolute;
-    border: 1px solid #FF3E79;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out;
-    top: 16px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #FF3E79;
 }
 
-.brands__thumbnail:active, 
-.brands__thumbnail:hover,
-.brands__thumbnail:focus {
-    outline: none;
-}
-
-.brands--button:after {
+.brand__link:before {
     position: absolute;
     content: "";
     width: 8px;
@@ -141,85 +141,47 @@ div .brands__pagination {
     border-right: none;
     border-bottom: none;
     transform-origin: center;
-    transform: translate(-3px, -4px) rotate(-45deg);
+    right: 32px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform: translateY( -4px) rotate(-45deg);
     outline: none;
-/*    transform: rotate(-45deg);*/
 }
 
-/*.brands__thumbnail:hover .brands--button,
-.brands__thumbnail:focus .brands--button,
-.brands__thumbnail:active .brands--button {
+/*.brand__link:active,*/
+.brand__link:hover,
+.brand__link:focus {
+    outline: none;
+}
+
+.brand__link--image {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.brands--button:hover,
+.brand__link:hover:after,
+.brand__link:focus:after,
+.brand__link:active:after {
     background-color: aqua;
     opacity: 0.5;
     outline:none;
 }
 
-.brands__thumbnail:active .brands--button:after  {
+.swiper-slide-active > .brand__link:after {
+     background-color: aqua;
+    opacity: 0.5;
+}
+
+.brands__thumbnail > .brand__link:active:before  {
     transform-origin: center;
-    transform: translate(-4px, -4px) rotate(-45deg);
+    transform: translate(-2px, -4px) rotate(-45deg);
     opacity: 0.7;
-}*/
-    
-/*.brands--button:active:after  {
-    transform-origin: center;
-    transform: translate(-4px, -4px) rotate(-45deg);
-    opacity: 0.7;
-}*/
-
-.brands__thumbnail--lenovo {
-    background-image: url(img/goods/lenovo.svg);
-    background-repeat: no-repeat;
-    background-position: 16px 50%;
-    background-color: #FFFFFF;
 }
 
-.brands__thumbnail--samsung {
-    background-image: url(img/goods/samsung.svg);
-    background-repeat: no-repeat;
-    background-position: 16px 50%;
-    background-color: #FFFFFF;
-}
-
-.brands__thumbnail--apple {
-    background-image: url(img/goods/apple.svg);
-    background-repeat: no-repeat;
-    background-position: 16px 50%;
-    background-color: #FFFFFF;
-}
-
-.brands__thumbnail--viewsonic {
-    background-image: url(img/goods/viewsonic.svg);
-    background-position: 16px 50%;
-    background-repeat: no-repeat;
-    background-color: #FFFFFF;
-}
-
-.brands__thumbnail--bosch {
-    background: url(img/goods/bosch.svg);
-    background-position: 16px 50%;
-    background-repeat: no-repeat;
-    background-color: #FFFFFF;
-}
-
-.brands__thumbnail--hp {
-    background: url(img/goods/hp.svg);
-    background-position: 16px 50%;
-    background-repeat: no-repeat;
-    background-color: #FFFFFF;
-}
-
-.brands__thumbnail--acer {
-    background: url(img/goods/acer.svg);
-    background-position: 16px 50%;
-    background-repeat: no-repeat;
-    background-color: #FFFFFF;
-}
-
-.brands__thumbnail--sony {
-    background: url(img/goods/sony.svg);
-    background-position: 16px 50%;
-    background-repeat: no-repeat;
-    background-color: #FFFFFF;
+.showhide {
+    display: none;
 }
 
 @media only screen and (min-width: 768px)  {
@@ -231,13 +193,23 @@ div .brands__pagination {
         
     /* BRANDS */
     
+/*    .brands__swiper-container {
+        height: 144px;
+    }*/
+    
     .brands__container {
+        width: auto;
         flex-wrap: wrap;
-/*        justify-content: space-around;*/
         row-gap: 16px;
+        height: 168px;
         column-gap: 32px;
         margin-left: 16px;
+        overflow: hidden;
 /*        margin-bottom: 8px;*/
+    }
+    
+    .brands__container--maximized {
+        height: 100%;
     }
     
     .brands__header {
@@ -254,6 +226,36 @@ div .brands__pagination {
         margin-left: 0;
         margin-right: 0;
     }
+    
+    
+    .showhide {
+        position: relative;
+        display: block;
+        left: 52px;
+    }
+    
+    .showhide:before {
+        position: absolute;
+        /*display: block;*/
+        content: url("./img/icons/continue_read_icon.png");
+        left: -20px;
+    }
+    
+    .showhide__opened:before {
+        position: absolute;
+        /*display: block;*/
+        content: url("./img/icons/continue_read_icon.png");
+        left: -20px;
+        transform: rotate(180deg);
+    }
+    
+/*    .showhide__opened::after {
+        content: "Скрыть";
+    }
+    
+    .showhide::after {
+        content: "Показать все";
+    }*/
     
 }
 
@@ -273,7 +275,12 @@ div .brands__pagination {
     }
     
     .brands__container {
+        height: 168px;
         margin-left: 32px;
+    }
+    
+    .brands__container--maximized {
+        height: 100%;
     }
     
     .brands__thumbnail {
