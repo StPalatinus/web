@@ -1,0 +1,131 @@
+  'use strict';
+  window.onload = function() {
+        
+    function toggleSwiperClasses(action) {
+        let brandsSwiperContainer = document.querySelector('.brands__swiper-container');
+        let brandsContainer = document.querySelector('.brands__container');
+        let brands = brandsContainer.querySelectorAll('.brands__thumbnail');
+        let brandsPaginatopn = document.querySelector('.brands__pagination');
+        
+        if(action === ("remove") && brandsSwiperContainer.classList.contains('swiper-container')){
+            brandsSwiperContainer.classList.remove('swiper-container');
+            brandsContainer.classList.remove('swiper-wrapper');
+            for(let i = 0; i < brands.length; i++) {
+                brands[i].classList.remove('swiper-slide');
+            }
+            brandsPaginatopn.style.display = "none";
+        } else if (action === ("add") ) {
+            brandsSwiperContainer.classList.add('swiper-container');
+            brandsContainer.classList.add('swiper-wrapper');
+            for(let i = 0; i < brands.length; i++) {
+                brands[i].classList.add('swiper-slide');
+            }
+            brandsPaginatopn.style.display = "block";
+        }
+    }
+
+//  'use strict';
+
+  // breakpoint where swiper will be destroyed
+  // and switches to a dual-column layout
+  const breakpoint = window.matchMedia( '(min-width:768px)' );
+  
+
+  // keep track of swiper instances to destroy later
+  let mySwiper;
+
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+
+  const breakpointChecker = function() {
+    // if larger viewport and multi-row layout needed
+    if ( breakpoint.matches === true ) {
+        
+      // clean up old instances and inline styles when available
+	  if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+          toggleSwiperClasses('remove');
+	  // or/and do nothing
+	  return;
+
+      // else if a small viewport and single column layout needed
+      } else if ( breakpoint.matches === false ) {
+          
+        // fire small viewport version of swiper
+        toggleSwiperClasses('add');
+        enableSwiper();
+        return;
+      }
+
+  };
+  
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+
+  const enableSwiper = function() {
+
+    mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        effect: 'slide',
+        updateOnWindowResize: true,
+        preventClicksPropagation: true,
+        loop: true,
+    
+    
+//    slidesPerView: 'auto',
+//  preloadImages: true,
+//  updateOnImagesReady: true,
+  
+//  freeMode:true,
+//  noSwipingClass: 'brands__thumbnail--apple',
+//  shortSwipes: false,
+//  longSwipes: false,
+//  grabCursor: true,
+//  spaceBetween: 15,
+  //  loop: true,
+//  initialSlide:	2,
+//  speed: 300,
+//  autoplay : 95000,
+
+    autoplay: {
+        delay: 5500,
+      },
+
+    pagination: {
+        el: '.swiper-pagination',
+    //    dynamicBullets: true,
+        paginationClickable : true,
+        effect : 'fade',
+    //    hideOnClick: true,
+        clickable: true,
+      },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+        },
+        
+    mousewheel: {
+        invert: true,
+      },
+});
+
+//    mySwiper.slideNext();
+    mySwiper.autoplay.start();
+
+  };
+
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+
+  // keep an eye on viewport size changes
+  breakpoint.addListener(breakpointChecker);
+
+  // kickstart
+//  toggleSwiperClasses();
+  breakpointChecker();
+
+};
