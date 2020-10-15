@@ -237,6 +237,9 @@ div .brands__pagination {
     
     .brands__header {
         padding-left: calc(100% / 2 - 384px);
+        padding-right: calc(100% / 2 - 384px);
+        white-space: pre-line;
+        border: 1px solid black;
     }
 
     .brands__thumbnail {
@@ -313,8 +316,10 @@ div .brands__pagination {
 
     .brands__header {
         padding-left: calc(100% / 2 - 560px);
+        padding-right: calc(100% / 2 - 560px);
         margin-left: 16px;
         margin-right: 16px;
+/*        white-space: normal;*/
     }
     
     .brands__swiper-container {
