@@ -239,7 +239,6 @@ div .brands__pagination {
         padding-left: calc(100% / 2 - 384px);
         padding-right: calc(100% / 2 - 384px);
         white-space: pre-line;
-        border: 1px solid black;
     }
 
     .brands__thumbnail {
