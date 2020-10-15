@@ -5,14 +5,9 @@
     const       brandsContainer = document.querySelector('.brands__container');
     
     showHide.onclick = function () {
-        if (showHide.classList.contains('showhide__opened')) {
-            showHide.textContent = showText;
-            brandsContainer.classList.remove('brands__container--maximized');
-            showHide.classList.remove('showhide__opened');
-        } else {
-            showHide.textContent = hideText;
-            brandsContainer.classList.add('brands__container--maximized');
-            showHide.classList.add('showhide__opened');
-        }
+        brandsContainer.classList.toggle('brands__container--maximized');
+        showHide.textContent = showHide.classList.toggle('showhide__opened')
+                                ? showHide.textContent = hideText 
+                                : showHide.textContent = showText;
     };
     
