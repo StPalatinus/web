@@ -55,6 +55,7 @@ ul {
 }
 
 .brands__swiper-container {
+    position: relative;
     height: 100%;
 /*    width: 240px;*/
 }
@@ -82,8 +83,10 @@ ul {
 
 .swiper-pagination {
     position: relative;
-    transform: translateY(16px);
+    /*transform: translateY(26px);*/
+    transform: translate3d(0, 20px, 0);
     letter-spacing: 10px;
+    z-index: 100;
 }
 
 div .brands__pagination {
