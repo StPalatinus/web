@@ -6,6 +6,8 @@
 @import "fonts/stylesheet.css";
 
 html {
+    margin: 0;
+    padding: 0;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
@@ -23,7 +25,7 @@ ul {
 /*    min-height: 100vh;*/
     padding-bottom: 16px;
     font-family: "TT Lakes", sans-serif; 
-    background-color: #F2F2F2;
+/*    background-color: #F2F2F2;*/
     margin: 0;
     overflow-y: auto;
 }
@@ -34,11 +36,22 @@ ul {
     position: relative;
     box-sizing: border-box;
 /*    background-color: #F8F8F8;*/
+    background-color: #F2F2F2;
 }
 
 .brands__header {
-/*    margin-left: 16px;
-    margin-right: 16px;*/
+    box-sizing: border-box;
+    height: 80px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-image: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
 }
 
 .brands__swiper-container {
@@ -104,6 +117,7 @@ div .brands__pagination {
     display: block;
     flex-basis: calc(100% - 32px);
     flex-basis: 240px;
+    min-width: 240px;
     height: 72px;
     background-color: #FFFFFF;
 /*    margin-left: 16px;
@@ -138,13 +152,13 @@ div .brands__pagination {
     width: 8px;
     height: 8px;
     border: 1px solid #FF3E79;
-    border-right: none;
-    border-bottom: none;
+    border-left: none;
+    border-top: none;
     transform-origin: center;
     right: 32px;
     top: 50%;
     transform: translate(-50%, -50%);
-    transform: translateY( -4px) rotate(-45deg);
+    transform: translate(-2px, -4px) rotate(-45deg);
     outline: none;
 }
 
@@ -176,32 +190,41 @@ div .brands__pagination {
 
 .brands__thumbnail > .brand__link:active:before  {
     transform-origin: center;
-    transform: translate(-2px, -4px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
     opacity: 0.7;
 }
 
-.showhide {
+.button__showhide {
     display: none;
 }
 
 @media only screen and (min-width: 768px)  {
     
     .body {
-        margin: 0 auto;
-        max-width: 768px;
-}
+        width: 100%;
+    }
         
     /* BRANDS */
     
-/*    .brands__swiper-container {
-        height: 144px;
-    }*/
+    .brands {
+        box-sizing: border-box;
+    }
     
+    .brands__header {
+        height: 56px;
+        /*margin: 16px, 24px;*/
+    }
+    
+    .brands__swiper-container {
+        margin: 0 auto;
+        max-width: 768px;
+    }
+
     .brands__container {
         width: auto;
         flex-wrap: wrap;
         row-gap: 16px;
-        height: 168px;
+        height: 156px;
         column-gap: 32px;
         margin-left: 16px;
         overflow: hidden;
@@ -209,13 +232,12 @@ div .brands__pagination {
     }
     
     .brands__container--maximized {
-        height: 100%;
+        height: auto;
     }
     
     .brands__header {
-/*    margin-left: 31px;
-    margin-right: 31px;*/
-}
+        padding-left: calc(100% / 2 - 384px);
+    }
 
     .brands__thumbnail {
         box-sizing: border-box;
@@ -227,56 +249,84 @@ div .brands__pagination {
         margin-right: 0;
     }
     
-    
-    .showhide {
-        position: relative;
-        display: block;
-        left: 52px;
+    .button {
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        white-space: nowrap;
+        color: #1B1C21;
+        border: none;
+        cursor: pointer;
+        outline: none;
     }
     
-    .showhide:before {
+    .button__showhide {
+        position: relative;
+        display: block;
+        margin-left: calc(100% / 2 - 384px);
+        margin-top: 16px;
+        left: 17px;
+        padding-left: 17px;
+        
+    }
+    
+    .button__showhide:hover,
+    .button__showhide:active {
+        outline: none;
+        filter: box-shadow(3px 3px 3px 3px #EAEAEA);
+    }
+
+    .button__showhide:focus {
+        outline: none;
+    }
+    
+    .button__showhide:before {
         position: absolute;
-        /*display: block;*/
+        display: block;
         content: url("./img/icons/continue_read_icon.png");
-        left: -20px;
+        left: 0;
     }
     
     .showhide__opened:before {
         position: absolute;
-        /*display: block;*/
+        display: block;
         content: url("./img/icons/continue_read_icon.png");
-        left: -20px;
+        left: 0;
         transform: rotate(180deg);
     }
-    
-/*    .showhide__opened::after {
-        content: "Скрыть";
-    }
-    
-    .showhide::after {
-        content: "Показать все";
-    }*/
-    
 }
 
 @media only screen and (min-width: 1120px)  {
     
     .body {
-        margin: 0 auto;
-        max-width: 1120px;
+        width: 100%;
     }
     
     /* BRANDS */
 
     .brands {
+        box-sizing: border-box;
+/*        margin: 0 auto;
+        max-width: 1120px;*/
     }
 
     .brands__header {
+        padding-left: calc(100% / 2 - 560px);
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    
+    .brands__swiper-container {
+        margin: 0 auto;
+        max-width: 1120px;
     }
     
     .brands__container {
         height: 168px;
-        margin-left: 32px;
+        width: auto;
+        box-sizing: border-box;
+/*        margin-left: 32px;*/
     }
     
     .brands__container--maximized {
@@ -287,6 +337,12 @@ div .brands__pagination {
         min-width: 240px;
         flex-basis: calc((100% / 4) - 96px);
         box-sizing: border-box;
+    }
+    
+    .button__showhide {
+        /*left: 17px;*/
+        margin-left: calc(100% / 2 - 560px);
+        /*padding-left: 17px;*/
     }
 }
 
