@@ -1427,7 +1427,7 @@ template {
   .button__showhide:before {
     position: absolute;
     display: block;
-    content: url("/../../img/icons/continue-read-icon.png");
+    content: url("/img/icons/continue_read_icon.png");
     left: 0; }
   .showhide__opened:before {
     position: absolute;
