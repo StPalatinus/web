@@ -1,7 +1,4 @@
 'use strict';
-//var myImage = require('../../src/img/icons/burger.png');
-//console.log(myImage);
-//import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import Swiper, { Navigation, Pagination, Autoplay, Keyboard } from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay, Keyboard]);
 import '../scss/style.scss';
