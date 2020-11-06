@@ -1,0 +1,126 @@
+@import '../variables_and_defaults/button__with_arrow.scss';
+
+$cover-bg-color-for-mobiles-and-planshets: rgba(255, 255, 255, 0.9);
+$modal-default-text-color: #7E7E82;
+$modal-alert-text-color: #FF3E79;
+$modal-backbround-color: #FFF;
+$form-heder-color: #1B1C21;
+
+@mixin cover-style {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $cover-bg-color-for-mobiles-and-planshets;
+    z-index: 0;
+    overflow: hidden;
+}
+
+@mixin modal-default-style {
+    position: fixed;
+    box-sizing: content-box;
+    padding: 24px 24px 32px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $modal-backbround-color;
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 16px;
+    color: $modal-default-text-color;
+    overflow-x: hidden;
+    z-index: 3;
+    display: none;
+}
+
+.button__with_arrow {
+    @include button__with_arrow;
+}
+
+.modal {
+    @include modal-default-style;
+    max-width: 440px;
+    display: none;
+}
+
+.modal__call-form,
+.modal__feedback-form {
+    position: relative;
+}
+
+.modal--alert-text {
+    color: $modal-alert-text-color;
+}
+
+.modal__form-header {
+    font-family: TT Lakes;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $form-heder-color;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.modal__button {
+    float: right;
+    width: 136px;
+    height: 32px;
+    margin-top: 44px;
+    background-image: url(/../../img/icons/arrow.svg);
+    background-position: 110% 50%;
+    background-size: 40% 40%;
+    background-repeat: no-repeat;
+}
+
+.modal__input-filed {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.modal__filedset {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.modal__call--visible,
+.modal__feedback--visible {
+    display: block;
+}
+
+@media only screen and (min-width: 768px)  {
+	.body {
+		overflow: hidden;
+	}
+	
+    .mobile-menu {
+        width: 320px;
+    }
+
+    .modal__feedback--visible,
+    .modal__call--visible {
+        //display: none;
+        z-index: 1;
+        ~ {
+            .cover {
+                @include cover-style;
+                position: fixed;
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1120px)  {
+
+}
+
+@media only screen and (min-width: 1440px)  {
+
+}

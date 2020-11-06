@@ -1,0 +1,16 @@
+$aside-menu-default-bg-color: #FFF;
+
+.aside-reclam {
+    //display: none;
+}
+
+@media only screen and (min-width: 1440px)  {
+    .aside-reclam  {
+        display: block;
+        padding: 24px 24px 32px;
+        width: 320px;
+        height: 100%;
+        background-color: $aside-menu-default-bg-color;
+        z-index: 2;
+    }
+}

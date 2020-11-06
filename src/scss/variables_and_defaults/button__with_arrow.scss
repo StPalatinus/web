@@ -1,0 +1,67 @@
+@import '../variables_and_defaults/button_wipe_deafult_stiles.scss';
+
+$arrow-color: #FFFFFF;
+$button-background-color: #FF3E79;
+    
+@mixin button__with_arrow {
+    @include button_wipe_defailt_stiles;
+    background-color: $button-background-color;
+    border-radius: 16px;
+    &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        border: 2px solid $arrow-color;
+        width: 80px;
+        height: 80px;
+        border-left: none;
+        border-top: none;
+        transform-origin: center;
+        left: 0;
+        transform: translate(50%, -50%) rotate(-45deg);
+        text-decoration: none;
+        outline: none;
+    }
+    &:hover {
+        opacity: 0.8;
+	}
+	&:focus {
+        opacity: 0.8;
+        }
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+
+/*
+.button__with_arrow {
+    @include button_wipe_defailt_stiles;
+    background-color: $button-background-color;
+    border-radius: 16px;
+    &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        border: 2px solid $arrow-color;
+        width: 80px;
+        height: 80px;
+        border-left: none;
+        border-top: none;
+        transform-origin: center;
+        left: 0;
+        transform: translate(50%, -50%) rotate(-45deg);
+        text-decoration: none;
+        outline: none;
+    }
+    &:hover {
+        opacity: 0.8;
+	}
+	&:focus {
+        opacity: 0.8;
+        }
+    &:active {
+        opacity: 0.8;
+    }
+}
+*/

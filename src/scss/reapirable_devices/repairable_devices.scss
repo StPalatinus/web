@@ -1,0 +1,182 @@
+@import '/../brands/thumbnail/thumbnail.scss';
+@import '../variables_and_defaults/dafult_text_settings.scss';
+
+$repairable-devices__link-after-circle-element-border: #FF3E79;
+$repairable-devices__link-before-arrow-element-border: #FF3E79;
+$repairable-devices__link-after-circle-element-default-background-color: aqua;
+$brands__link-after-circle-element-focused-background-color: aqua;
+$brands__link-after-circle-element-active-background-color: aqua;
+
+.repairable-devices {
+    box-sizing: border-box;
+}
+
+.repairable-devices__wrapper {
+    padding-bottom: 38px;
+}
+
+
+.prices__swiper-container,
+.repairable-devices__swiper-container {
+    z-index: 0;
+}
+
+
+.repairable-device__thumbnail {
+    box-sizing: border-box;
+    width: 224px;
+    height: 160px;
+    //margin-left: 0;
+    //margin-right: 0;
+    //flex-shrink: 1;
+    //flex-grow: 0;
+    //margin-left: 0;
+}
+
+.repairable-devices__link {
+    display: inline-block;
+    //width: 100%;
+    //height: 100%;
+    //margin-left: 16px;
+    &:after {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        right: 14px;
+        top: 75%;
+        transform: translateY(-50%);
+        border: 1px solid $repairable-devices__link-after-circle-element-border;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        border: 1px solid $repairable-devices__link-before-arrow-element-border;
+        border-left: none;
+        border-top: none;
+        transform-origin: center;
+        right: 32px;
+        top: 75%;
+        //transform: translate(-50%, -50%);
+        transform: translate(-1px, -4px) rotate(-45deg);
+        outline: none;
+    }
+    &:hover {
+        outline: none;
+        &:after {
+            background-color: $repairable-devices__link-after-circle-element-default-background-color;
+            opacity: 0.5;
+            outline: none;
+        }
+    }
+    &:focus {
+        outline: none;
+        &:after {
+            background-color: $brands__link-after-circle-element-focused-background-color;
+            opacity: 0.5;
+            outline: none;
+        }
+    }
+    &:active {
+        outline: none;
+        &:after {
+            background-color: $brands__link-after-circle-element-active-background-color;
+            opacity: 0.5;
+            outline: none;
+        }
+    }
+}
+
+.repairable-devices__link--inner-text {
+    position: absolute;
+    @include default-text-settings;
+    left: 16px;
+    top: 16px;
+    white-space: nowrap;
+}
+
+@media only screen and (min-width: 768px)  {
+    .repairable-devices__header {
+        height: 64px;
+        padding-left: calc(100% / 2 - 384px);
+        padding-right: calc(100% / 2 - 384px);
+        white-space: pre-line;
+    }
+
+    .repairable-devices__swiper-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 768px;
+    }
+
+    .repairable-devices__wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        height: 116px;
+        column-gap: 24px;
+        row-gap: 16px;
+        overflow: hidden;
+    }
+
+    .repairable-devices__wrapper--maximized {
+        height: 100%;
+    }
+
+    .repairable-device__thumbnail {
+        box-sizing: border-box;
+        width: 224px;
+        height: 160px;
+        margin-left: 0;
+        margin-right: 0;
+        flex-shrink: 1;
+        flex-grow: 0;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1120px)  {
+
+    .repairable-devices__header {
+        padding-left: calc(100% / 2 - 560px);
+        padding-right: calc(100% / 2 - 560px);
+        white-space: pre-line;
+    }
+    .repairable-devices__swiper-container {
+        //margin: 0 auto;
+        max-width: 1120px;
+    }
+
+    .repairable-devices__wrapper {
+        grid-template-columns: auto auto auto auto;
+        width: auto;
+  
+        column-gap: 32px;
+    }
+
+    .repairable-device__thumbnail {
+        box-sizing: border-box;
+        width: 240px;
+        height: 160px;
+    }
+
+    .repairable-device__thumbnail {
+        //margin-left: 32px;
+        //margin-left: 32px;
+    }
+}
+
+@media only screen and (min-width: 1440px)  {
+	.repairable-devices__swiper-container {
+        //margin: 0 auto;
+        max-width: 1120px;
+    }
+
+    .repairable-devices__wrapper {
+        column-gap: 32px;
+    }
+}

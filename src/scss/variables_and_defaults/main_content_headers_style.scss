@@ -1,0 +1,24 @@
+$brands__header-background-image-gradient-star-tcolor: #FFFFFF;
+$brands__header-background-image-gradient-end-tcolor:  #F8F8F8;
+$brands__header-text-color: #7E7E82;
+
+@mixin main_content_header_styles {
+	box-sizing: border-box;
+	height: 80px;
+	margin-left: 16px;
+	margin-right: 16px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-image: linear-gradient(
+		270deg, 
+		$brands__header-background-image-gradient-star-tcolor 0%, 
+		$brands__header-background-image-gradient-end-tcolor 98.61%
+	);
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: -0.2px;
+	text-transform: uppercase;
+	color: $brands__header-text-color;
+	font-weight: 500;
+	border-top: 1px solid #D9FFF5;
+}

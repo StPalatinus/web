@@ -1,0 +1,14 @@
+@import '../variables_and_defaults/button_wipe_deafult_stiles.scss';
+
+$button-color: #1B1C21;
+
+.button {
+    @include button_wipe_defailt_stiles;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    font-weight: 500;
+    color:$button-color;
+}
