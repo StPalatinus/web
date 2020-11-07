@@ -121,7 +121,9 @@ $read-more-text-color: #1B1C21;
 	&::before {
 		display: block;
 		position: absolute;
-		content: url("/img/icons/continue_read_icon.png");
+		//content: url("/img/icons/continue-read-icon.png");
+		content: url('./../img/icons/continue-read-icon.png');
+		//content: url={require(`../../media/${continue-read-icon.png}.jpg`)};
 	}
 	&:hover {
 		opacity: 0.5;

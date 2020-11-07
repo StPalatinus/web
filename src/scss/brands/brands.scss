@@ -284,15 +284,15 @@ $button__showhide-hovered-and-active-box-shadow-filter-color:  #EAEAEA;
     .button__showhide:before {
         position: absolute;
         display: block;
-        //content: url('/img/icons/continue_read_icon.png');
-        content: url('/../../img/icons/continue-read-icon.png');
+        content: url('./../img/icons/continue-read-icon.png');
+        //content: url('/../../img/icons/continue-read-icon.png');
         left: 0;
     }
     
     .showhide__opened:before {
         position: absolute;
         display: block;
-        content: url('/img/icons/continue-read-icon.png');
+        content: url('./../img/icons/continue-read-icon.png');
         left: 0;
         transform: rotate(180deg);
     }

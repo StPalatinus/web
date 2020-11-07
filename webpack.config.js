@@ -11,8 +11,7 @@ module.exports = {
 
   // Выходной файл
   output: {
-    filename: './js/bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: './js/bundle.js'
   },
 
   // Source maps для удобства отладки
@@ -35,7 +34,7 @@ module.exports = {
 
       // Компилируем SCSS в CSS
       {
-        test: /\.(css|s[ac]ss)$/,
+        test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
@@ -82,23 +81,12 @@ module.exports = {
       filename: 'style.css',
     }),
 
-     // Копируем картинки
-    /*
-    new CopyWebpackPlugin([
-      { from: './src/img/icontent', to: 'img/content' },
-      { from: './src/img/goods', to: 'img/goods' },
-      { from: './src/img/icons', to: 'img/icons' },
-      { from: './src/img/logo', to: 'img/content' },
-    ])
-    */
     // Копируем картинки
-    
     new CopyWebpackPlugin([
       {
         from: './src/img',
         to: 'img',
       },
     ])
-    
   ],
 };

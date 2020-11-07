@@ -3,7 +3,8 @@ import Swiper, { Navigation, Pagination, Autoplay, Keyboard } from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay, Keyboard]);
 import '../scss/style.scss';
 import './buttons_and_modals/buttons_and_modals.js'
-
+import cReadIcon from '../../src/img/icons/continue-read-icon.png';
+ 
 let   SwiperInstance;
 
 window.onload = function() {
