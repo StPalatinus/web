@@ -421,44 +421,47 @@
     
         
         
-        <div class="modal modal__feedback">
-            <button type="button" tabindex="1" class="modal__feedback-button button button--close modal__feedback-button--close" aria-label="Закрыть меню"></button>
-            <fieldset class="modal_content-group">
-                <legend class="modal__form-header">Обратная связь</legend>
-                <form class="modal__feedback-form" id="formmodal-feedback" name="feedback_form">
-                    <input type="text" name="username" placeholder="Имя" class="modal__input-filed" autofocus>
-                    <input type="tel" name="order-call" placeholder="Телефон" class="modal__input-filed">
-                    <input type="email" name="e-mail" placeholder="Электронная почта" class="modal__input-filed">
-                    <textarea name="feedback_message" rows="7" placeholder="Сообщение" class="modal__filedset"></textarea>
-                    <div class="modal__feedback__information">
-                            Нажимая “отправить”, вы даете согласие на
-                        <span class="modal--alert-text">персональных данных
-                        и соглашаетесь с нашей</span>
-                        <span class="modal--alert-text"> политикой конфиденциальности</span>
-                    </div>
-                    <input type="submit" value="Отправить" class="button__with_arrow modal__button">
-                </form>
-            </fieldset>
-        </div>
-        
-        
-        
-        <div class="modal modal__call">
-            <button type="button" tabindex="1" class="modal__feedback--button button button--close modal__call-button--close" aria-label="Закрыть меню"></button>
-            <fieldset class="modal_content-group">
-                <legend class="modal__form-header">Заказать звонок</legend>
-                    <form class="modal__call-form" id="form-call" name="call-form">
-                        <input type="tel" name="feedback-call" placeholder="Телефон" class="modal__input-filed autofocus">
-                        <div class="modal__information">
-                            Нажимая “отправить”, вы даете согласие на
-                            <span class="modal--alert-text">персональных данных</span>
-                            и соглашаетесь с нашей
+        <div class="modal modal__feedback modal__feedback--visible">
+            <div class="modal__feedback--side-block">
+                <button type="button" tabindex="1" class="button button--close modal__feedback--close-button" aria-label="Закрыть меню"></button>
+                <fieldset class="modal_content-group">
+                    <legend class="modal__form-header">Обратная связь</legend>
+                    <form class="modal__feedback-form" id="formmodal-feedback" name="feedback_form">
+                        <input type="text" name="username" placeholder="Имя" class="modal__input-filed" autofocus>
+                        <input type="tel" name="order-call" placeholder="Телефон" class="modal__input-filed">
+                        <input type="email" name="e-mail" placeholder="Электронная почта" class="modal__input-filed">
+                        <textarea name="feedback_message" rows="7" placeholder="Сообщение" class="modal__filedset"></textarea>
+                        <div class="modal__feedback__information">
+                                Нажимая “отправить”, вы даете согласие на
+                            <span class="modal--alert-text">персональных данных
+                            и соглашаетесь с нашей</span>
                             <span class="modal--alert-text"> политикой конфиденциальности</span>
                         </div>
                         <input type="submit" value="Отправить" class="button__with_arrow modal__button">
-                    </form> 
-            </fieldset>
+                    </form>
+                </fieldset>
+            </div>
         </div>
+        
+        
+        <div class="modal modal__call"></div>
+            <div class="modal__feedback--side-block">
+                <button type="button" tabindex="1" class="button button--close modal__call--close-button" aria-label="Закрыть меню"></button>
+                <fieldset class="modal_content-group">
+                    <legend class="modal__form-header">Заказать звонок</legend>
+                        <form class="modal__call-form" id="form-call" name="call-form">
+                            <input type="tel" name="feedback-call" placeholder="Телефон" class="modal__input-filed autofocus">
+                            <div class="modal__information">
+                                Нажимая “отправить”, вы даете согласие на
+                                <span class="modal--alert-text">персональных данных</span>
+                                и соглашаетесь с нашей
+                                <span class="modal--alert-text"> политикой конфиденциальности</span>
+                            </div>
+                            <input type="submit" value="Отправить" class="button__with_arrow modal__button">
+                        </form> 
+                </fieldset>
+            </div>
+        
     
         <div class="cover"></div>
     <script type="text/javascript" src="./js/bundle.js"></script></body>
