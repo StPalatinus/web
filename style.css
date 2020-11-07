@@ -796,7 +796,7 @@ template {
   .read-more::before {
     display: block;
     position: absolute;
-    content: url("/img/icons/continue_read_icon.png"); }
+    content: url("/img/icons/continue-read-icon.png"); }
   .read-more:hover {
     opacity: 0.5; }
 
@@ -1427,7 +1427,7 @@ template {
   .button__showhide:before {
     position: absolute;
     display: block;
-    content: url("/img/icons/continue_read_icon.png");
+    content: url("/img/icons/continue-read-icon.png");
     left: 0; }
   .showhide__opened:before {
     position: absolute;
