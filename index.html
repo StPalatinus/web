@@ -86,7 +86,7 @@
         <aside class="aside-reclam">
             
         </aside>
-
+    
         <header class="header">
             
                 <div class="header__menu button--burger--divider">
@@ -128,9 +128,9 @@
                 </ul>
         </header>
         <main class="main">
-            <h1 class="title main__title">Услуги и сервисы</h1>
+            <h1 class="title main__title title--notch">Услуги и сервисы</h1>
             <nav class="main__nav">
-                <ul class="nav__list">
+                <ul class="nav__list main__nav--list">
                     <li class="nav__list--item">
                         <a href="#" class="nav__list--link nav__list--link--active">Ремонтируемые бренды</a>
                     </li>
@@ -421,11 +421,11 @@
     
         
         
-        <div class="modal modal__feedback modal__feedback--visible">
+        <div class="modal modal__feedback">
             <div class="modal__feedback--side-block">
                 <button type="button" tabindex="1" class="button button--close modal__feedback--close-button" aria-label="Закрыть меню"></button>
                 <fieldset class="modal_content-group">
-                    <legend class="modal__form-header">Обратная связь</legend>
+                    <legend class="modal__form-header title--notch modal__form-header--notch">Обратная связь</legend>
                     <form class="modal__feedback-form" id="formmodal-feedback" name="feedback_form">
                         <input type="text" name="username" placeholder="Имя" class="modal__input-filed" autofocus>
                         <input type="tel" name="order-call" placeholder="Телефон" class="modal__input-filed">
@@ -444,11 +444,11 @@
         </div>
         
         
-        <div class="modal modal__call"></div>
+        <div class="modal modal__call">
             <div class="modal__feedback--side-block">
                 <button type="button" tabindex="1" class="button button--close modal__call--close-button" aria-label="Закрыть меню"></button>
                 <fieldset class="modal_content-group">
-                    <legend class="modal__form-header">Заказать звонок</legend>
+                    <legend class="modal__form-header title--notch modal__form-header--notch">Заказать звонок</legend>
                         <form class="modal__call-form" id="form-call" name="call-form">
                             <input type="tel" name="feedback-call" placeholder="Телефон" class="modal__input-filed autofocus">
                             <div class="modal__information">
@@ -461,7 +461,7 @@
                         </form> 
                 </fieldset>
             </div>
-        
+        </div>
     
         <div class="cover"></div>
     <script type="text/javascript" src="./js/bundle.js"></script></body>
