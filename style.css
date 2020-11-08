@@ -2256,7 +2256,8 @@ template {
   background-color: transparent;
   cursor: pointer;
   background-color: #FF3E79;
-  border-radius: 16px; }
+  border-radius: 16px;
+  color: #FFFFFF; }
   .button__with_arrow::after {
     position: absolute;
     display: block;
@@ -2327,7 +2328,7 @@ template {
   box-sizing: border-box;
   border: 1px solid #EAEAEA;
   border-radius: 8px;
-  outline-color: #d9e6e9;
+  outline-color: #D9E6E9;
   padding: 2px 16px;
   font-size: 16px;
   line-height: 24px;
