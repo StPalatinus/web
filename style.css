@@ -1106,7 +1106,8 @@ template {
   .header-list__services,
   .header__feedback-list {
     display: flex;
-    align-self: flex-start; }
+    align-self: flex-start;
+    transform: translateY(6px); }
   .main-header__statusbar {
     display: block; }
   .button--repair--divider:before {
