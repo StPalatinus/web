@@ -659,20 +659,20 @@ template {
       -ms-user-select: none;
           user-select: none; }
 
-/*
 .main__nav {
-	overflow-y: auto;
-	-ms-overflow-style: none;
-	overflow: -moz-scrollbars-none;
-	margin-left: 24px;
-	padding: 10px 0;
-	user-select: none;
-	&::-webkit-scrollbar {
-		width: 0px;
-		background: transparent;
-	}
-}
-*/
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  margin-left: 24px;
+  padding: 10px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .main__nav::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; }
+
 .title--notch::before {
   content: "";
   display: block;
@@ -692,6 +692,9 @@ template {
   justify-content: flex-start;
   list-style: none; }
 
+.swiper-slide {
+  width: 240px; }
+
 .nav__list--item {
   display: block;
   box-sizing: content-box;
@@ -701,8 +704,7 @@ template {
 
 .nav__list--link {
   display: block;
-  min-width: 200px;
-  flex-basis: 200px;
+  width: 200px;
   flex-grow: 1;
   padding: 8px 20px;
   text-decoration: none;
@@ -826,7 +828,7 @@ template {
   .article__text--inner--maximized {
     height: 100%; } }
 
-@media only screen and (min-width: 1120) {
+@media only screen and (min-width: 1120px) {
   .button--contains-text {
     width: auto;
     padding-right: 48px;
@@ -860,7 +862,7 @@ template {
   .article__text--inner--maximized {
     height: 100%; } }
 
-@media only screen and (min-width: 1440) {
+@media only screen and (min-width: 1440px) {
   .button--contains-text {
     width: auto;
     padding-right: 48px;
