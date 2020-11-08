@@ -3,25 +3,23 @@
     const       hideText = "Скрыть";
     const       readMore = "Читать далее";
     const       hide = "Скрыть";
-    //const       showHide = document.querySelector('.button__showhide');
-    //const       
-    //const       container = document.querySelector('.brands__container');
-
     const       mobileMenu = document.querySelector('.mobile-menu');
     const       openMenu = document.querySelector('.button--burger');
     const       closeMenu = document.querySelector('.mobile-menu__button--close');
-
     const       topMenuFeedback = document.querySelector('.header__feedback-button');
     const       mobileMenuFeedback = document.querySelector('.feedback-list__button--chat');
     const       feedbackModal = document.querySelector('.modal__feedback');
-    const       feedbackModalClose = document.querySelector('.modal__feedback-button--close');
-
+    const       feedbackModalClose = document.querySelector('.modal__feedback--close-button');
     const       topMenuCall = document.querySelector('.feedback-list__button--call');
     const       mobileMenuCall = document.querySelector('.mobile-menu__button--call');
     const       callModal = document.querySelector('.modal__call');
-    const       callModalClose = document.querySelector('.modal__call-button--close');
+    const       callModalClose = document.querySelector('.modal__call--close-button');
+    const       body = document.body;
     
-    //console.log(topMenuCall);
+    //const       htmlDefaultOverf = html.style.overflow;
+    
+    //console.log(html.style);
+    //console.log(html2.style.overflow);
     
 
     //console.log(feedbackModalClose);
@@ -83,43 +81,66 @@
           }
     };
 
-    openMenu.onclick = function() {
+    openMenu.onclick = function(e) {
       mobileMenu.classList.toggle('mobile-menu--visible');
+      body.style.position = "fixed";
     }
 
-    closeMenu.onclick = function() {
+    closeMenu.onclick = function(e) {
       mobileMenu.classList.toggle('mobile-menu--visible');
       feedbackModal.classList.remove('modal__feedback--visible');
       callModal.classList.remove('modal__call--visible');
+      body.style.position = "initial";
     }
 
 
 
-    mobileMenuFeedback.onclick = function () {
+    mobileMenuFeedback.onclick = function (e) {
       feedbackModal.classList.toggle('modal__feedback--visible');
       callModal.classList.remove('modal__call--visible');
+      body.style.position = "fixed";
     }
     
-    topMenuFeedback.onclick = function () {
+    topMenuFeedback.onclick = function (e) {
       feedbackModal.classList.toggle('modal__feedback--visible');
+      body.style.position = "fixed";
     }
 
-    feedbackModalClose.onclick = function () {
+    feedbackModalClose.onclick = function (e) {
       feedbackModal.classList.toggle('modal__feedback--visible');
+      body.style.position = "fixed";
     }
 
 
 
-    mobileMenuCall.onclick = function () {
+    mobileMenuCall.onclick = function (e) {
       callModal.classList.toggle('modal__call--visible');
       feedbackModal.classList.remove('modal__feedback--visible');
+      body.style.position = "fixed";
     }
 
-    topMenuCall.onclick = function () {
+    topMenuCall.onclick = function (e) {
       callModal.classList.toggle('modal__call--visible');
+      body.style.position = "fixed";
     }
 
-    callModalClose.onclick = function () {
+    callModalClose.onclick = function (e) {
       callModal.classList.toggle('modal__call--visible');
+      body.style.position = "initial";
     }
-    
+    /*
+    function toggleScroll (mode) {
+      mode 
+          ?
+          : ;
+    }
+    */
+
+    /*
+    html, 
+    body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    */

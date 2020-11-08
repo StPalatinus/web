@@ -306,6 +306,14 @@ $mobile-menu__list--link-before-color-pointer: #41F6D7;
 		padding-bottom: 50px;
 	}
 
+	.mobile-menu__button--close {
+		display: none;
+	}
+
+	.mobile-menu__logo {
+		margin-left: 0;
+	}
+
 	.mobile-menu {
 		position: initial;
 		display: flex;

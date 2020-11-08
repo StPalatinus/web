@@ -107,7 +107,7 @@
         <aside class="aside-reclam ">
             
         </aside>
-
+    <!--HEADER-->
         <header class="header">
             <!--<div class="header__logo-section">-->
                 <div class="header__menu button--burger--divider">
@@ -162,9 +162,9 @@
                 </ul>
         </header>
         <main class="main">
-            <h1 class="title main__title">Услуги и сервисы</h1>
+            <h1 class="title main__title title--notch">Услуги и сервисы</h1>
             <nav class="main__nav">
-                <ul class="nav__list">
+                <ul class="nav__list main__nav--list">
                     <li class="nav__list--item">
                         <a href="#" class="nav__list--link nav__list--link--active">Ремонтируемые бренды</a>
                     </li>
@@ -456,74 +456,77 @@
         <!--FEEDBACK-->
         <!--for show add class .modal__feedback--visible-->
         <div class="modal modal__feedback">
-            <button type="button" tabindex="1"
-                    class="modal__feedback-button button button--close modal__feedback-button--close"
-                    aria-label="Закрыть меню"></button>
-            <fieldset class="modal_content-group">
-                <legend class="modal__form-header">Обратная связь</legend>
-                <form class="modal__feedback-form" id="formmodal-feedback" name="feedback_form">
-                    <input 
-                        type="text" 
-                        name="username" 
-                        placeholder="Имя"
-                        class="modal__input-filed"
-                        autofocus></input>
-                    <input 
-                        type="tel" 
-                        name="order-call" 
-                        placeholder="Телефон"
-                        class="modal__input-filed"></input>
-                    <input 
-                        type="email" 
-                        name="e-mail" 
-                        placeholder="Электронная почта"
-                        class="modal__input-filed"></input>
-                    <textarea 
-                        name="feedback_message" 
-                        rows="7" 
-                        placeholder="Сообщение"
-                        class="modal__filedset"></textarea>
-                    <div class="modal__feedback__information">
-                            Нажимая “отправить”, вы даете согласие на
-                        <span class="modal--alert-text">персональных данных
-                        и соглашаетесь с нашей</span>
-                        <span class="modal--alert-text"> политикой конфиденциальности</span>
-                    </div>
-                    <input 
-                        type="submit" 
-                        value="Отправить"
-                        class="button__with_arrow modal__button">
-                </form>
-            </fieldset>
-        </div>
-        
-        <!--CALL-->
-        <!--for show add class .modal__call--visible-->
-        <div class="modal modal__call">
-            <button type="button" tabindex="1"
-                    class="modal__feedback--button button button--close modal__call-button--close"
-                    aria-label="Закрыть меню"></button>
-            <fieldset class="modal_content-group">
-                <legend class="modal__form-header">Заказать звонок</legend>
-                    <form class="modal__call-form" id="form-call" name="call-form">
+            <div class="modal__feedback--side-block">
+                <button type="button" tabindex="1"
+                        class="button button--close modal__feedback--close-button"
+                        aria-label="Закрыть меню"></button>
+                <fieldset class="modal_content-group">
+                    <legend class="modal__form-header title--notch modal__form-header--notch">Обратная связь</legend>
+                    <form class="modal__feedback-form" id="formmodal-feedback" name="feedback_form">
                         <input 
-                            type="tel"
-                            name="feedback-call"
+                            type="text" 
+                            name="username" 
+                            placeholder="Имя"
+                            class="modal__input-filed"
+                            autofocus></input>
+                        <input 
+                            type="tel" 
+                            name="order-call" 
                             placeholder="Телефон"
-                            class="modal__input-filed
-                            autofocus">
-                        <div class="modal__information">
-                            Нажимая “отправить”, вы даете согласие на
-                            <span class="modal--alert-text">персональных данных</span>
-                            и соглашаетесь с нашей
+                            class="modal__input-filed"></input>
+                        <input 
+                            type="email" 
+                            name="e-mail" 
+                            placeholder="Электронная почта"
+                            class="modal__input-filed"></input>
+                        <textarea 
+                            name="feedback_message" 
+                            rows="7" 
+                            placeholder="Сообщение"
+                            class="modal__filedset"></textarea>
+                        <div class="modal__feedback__information">
+                                Нажимая “отправить”, вы даете согласие на
+                            <span class="modal--alert-text">персональных данных
+                            и соглашаетесь с нашей</span>
                             <span class="modal--alert-text"> политикой конфиденциальности</span>
                         </div>
                         <input 
                             type="submit" 
                             value="Отправить"
                             class="button__with_arrow modal__button">
-                    </form> 
-            </fieldset>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+        <!--CALL-->
+        <!--for show add class .modal__call--visible-->
+        <div class="modal modal__call">
+            <div class="modal__feedback--side-block">
+                <button type="button" tabindex="1"
+                        class="button button--close modal__call--close-button"
+                        aria-label="Закрыть меню"></button>
+                <fieldset class="modal_content-group">
+                    <legend class="modal__form-header title--notch modal__form-header--notch">Заказать звонок</legend>
+                        <form class="modal__call-form" id="form-call" name="call-form">
+                            <input 
+                                type="tel"
+                                name="feedback-call"
+                                placeholder="Телефон"
+                                class="modal__input-filed
+                                autofocus">
+                            <div class="modal__information">
+                                Нажимая “отправить”, вы даете согласие на
+                                <span class="modal--alert-text">персональных данных</span>
+                                и соглашаетесь с нашей
+                                <span class="modal--alert-text"> политикой конфиденциальности</span>
+                            </div>
+                            <input 
+                                type="submit" 
+                                value="Отправить"
+                                class="button__with_arrow modal__button">
+                        </form> 
+                </fieldset>
+            </div>
         </div>
     <!--COVER-->
         <div class="cover"></div>
