@@ -1403,6 +1403,8 @@ template {
   .brands__thumbnail {
     box-sizing: border-box;
     width: 224px; }
+  .brands__pagination {
+    display: none; }
   .button__showhide {
     position: relative;
     display: block;
@@ -1806,6 +1808,7 @@ template {
 
 .prices__swiper-container,
 .repairable-devices__swiper-container {
+  display: flex;
   z-index: 0; }
 
 .repairable-device__thumbnail {
@@ -1877,8 +1880,7 @@ template {
   .repairable-devices__swiper-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    max-width: 768px; }
+    justify-content: space-around; }
   .repairable-devices__wrapper {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -1898,15 +1900,15 @@ template {
     margin-right: 0;
     flex-shrink: 1;
     flex-grow: 0;
-    margin-left: 0; } }
+    margin-left: 0; }
+  .repairable-devices__pagination {
+    display: none; } }
 
 @media only screen and (min-width: 1120px) {
   .repairable-devices__header {
     padding-left: calc(100% / 2 - 560px);
     padding-right: calc(100% / 2 - 560px);
     white-space: pre-line; }
-  .repairable-devices__swiper-container {
-    max-width: 1120px; }
   .repairable-devices__wrapper {
     grid-template-columns: auto auto auto auto;
     width: auto;
