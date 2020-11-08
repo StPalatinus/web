@@ -2350,7 +2350,7 @@ template {
   height: 32px;
   right: 0;
   margin-top: 44px;
-  background-image: url("/../../img/icons/arrow.svg");
+  background-image: url(./static/arrow.svg);
   background-position: 110% 50%;
   background-size: 40% 40%;
   background-repeat: no-repeat; }
