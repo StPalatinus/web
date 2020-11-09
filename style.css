@@ -2037,6 +2037,9 @@ template {
   .pricese__information-link:hover {
     opacity: 0.7; }
 
+.thumbnail__link:hover {
+  opacity: 0.7; }
+
 .prices__table-element {
   font-size: 14px;
   line-height: 18px;
@@ -2048,6 +2051,9 @@ template {
   padding: 16px 16px 20px 16px;
   width: 260px;
   height: 200px; }
+
+.prices__table-element:hover .thumbnail__link {
+  opacity: 0.7; }
 
 .prices__table-data,
 .prices__table-data--composite {
@@ -2237,11 +2243,6 @@ template {
   border-radius: 1px;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
 
-/*
-.modal__feedback--side-block {
-    margin: 0 auto;
-}
-*/
 .modal_content-group {
   position: relative;
   border: 0 none;
