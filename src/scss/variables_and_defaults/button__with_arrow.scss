@@ -9,7 +9,7 @@ $button-background-color: #FF3E79;
     border-radius: 16px;
     &::after {
         position: absolute;
-        display: block;
+        //display: block;
         content: "";
         border: 2px solid $arrow-color;
         width: 80px;

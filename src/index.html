@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1, maximum-scale=1">
-        <!--<link rel="stylesheet" href="./swiper/swiper-bundle.min.css">-->
         <!--<link rel="stylesheet" href="style.css">-->
     </head>
     <body class="body">
@@ -103,10 +102,6 @@
             </div>
         </aside>
 
-    <!--ASIDE FOR RECLAM-->
-        <aside class="aside-reclam ">
-            
-        </aside>
     <!--HEADER-->
         <header class="header">
             <!--<div class="header__logo-section">-->
@@ -165,14 +160,15 @@
             <h1 class="title main__title title--notch">Услуги и сервисы</h1>
             <nav class="main__nav">
                 <ul class="nav__list main__nav--list">
+                    
                     <li class="nav__list--item">
-                        <a href="#" class="nav__list--link nav__list--link--active">Ремонтируемые бренды</a>
-                    </li>
-                    <li class="nav__list--item">
-                        <a href="#" class="nav__list--link">Ремонтируемые устройства</a>
+                        <a href="#" class="nav__list--link nav__list--link--active">Ремонтируемые устройства</a>
                     </li>
                     <li class="nav__list--item">
                         <a href="#" class="nav__list--link">Дополнительные услуги</a>
+                    </li>
+                    <li class="nav__list--item">
+                        <a href="#" class="nav__list--link">Ремонтируемые бренды</a>
                     </li>
                     <li class="nav__list--item">
                         <a href="#" class="nav__list--link">Цены на услуги</a>
@@ -218,7 +214,7 @@
     <!--  BRANDS SECTION  -->
         <section class="brands">
             <h2 class="brands__header">Ремонт техники различных<br class="force__linebreak"/> брендов</h2>
-            <div class="brands__swiper-container swiper-container">
+            <div class="brands__swiper-container swiper-container" data-mobile="false">
                 <ul class="brands__container swiper-wrapper">
                     <li class="swiper-slide thumbnail brands__thumbnail">
                         <a href="https://www.lenovo.com" class="thumbnail__link brands__link" target="_blank">
@@ -278,13 +274,13 @@
                 </ul>
                 <div class="brands__pagination swiper-pagination"></div>
             </div>
-            <button class="button button__showhide">Показать все</button>
+            <button class="button__showhide button__showhide--brands">Показать все</button>
         </section>
         
     <!--REPAIRABLE DEVICES-->
         <section class="repairable-devices">
             <h2 class="brands__header repairable-devices__header">Ремонт различных видов<br class="force__linebreak"/> техники</h2>
-            <div class="repairable-devices__swiper-container swiper-container">
+            <div class="repairable-devices__swiper-container swiper-container" data-mobile="false">
                 <ul class="repairable-devices__wrapper swiper-wrapper">
                     <li class="swiper-slide thumbnail repairable-device__thumbnail">
                         <a href="#" class="thumbnail__link  repairable-devices__link">
@@ -329,29 +325,34 @@
                 </ul>
                 <div class="repairable-devices__pagination swiper-pagination"></div>
             </div>
-            <button class="button button__showhide">Показать все</button>
+            <button class="button__showhide button__showhide--repairable-devices">Показать все</button>
         </section>
+
+    <!--ASIDE FOR RECLAM-->
+    <aside class="aside-reclam ">
+            
+    </aside>
 
     <!--PRICES-->
         <section class="prices">
             <h2 class="brands__header prices__header">Цены на услуги<br class="force__linebreak"/></h2>
-            <div class="prices__swiper-container swiper-container">
-                <div class="prices__table-wrapper swiper-wrapper">
+            <div class="prices__swiper-container swiper-container" data-mobile="false">
+                <div class="swiper-wrapper prices__table-wrapper">
                     <div class="prices__caption">
-                        <span class="prices__table-data prices__table-caption">Ремонтные услуги</span>
-                        <span class="prices__table-data prices__table-caption">Цена</span>
-                        <span class="prices__table-data prices__table-caption">Срок</span>
+                        <span class="prices__table-data prices__table-caption prices__caption--services">Ремонтные услуги</span>
+                        <span class="prices__table-data prices__table-caption prices__caption--price">Цена</span>
+                        <span class="prices__table-data prices__table-caption prices__caption--time">Срок</span>
                     </div>
                     <div class="swiper-slide thumbnail prices__table-element">
-                        <span class="prices__table-data">
+                        <span class="prices__table-data prices__table-data--service">
                             <span class="prices__table-data--ghost-service">Ремонтные услуги</span>Диагностика
                         </span>
-                        <span class="prices__table-data">
+                        <span class="prices__table-data prices__table-data--price">
                             <span class="prices__table-data--ghost-service">Цена</span>
                             Бесплатно
                         </span>
                         <span class="prices__table-data prices__table-data prices__table-data--composite prices__table-data--ghost-complition-time">
-                            <span class="prices__data-link-description">
+                            <span class="prices__data-link-description prices__table-data--time">
                                 <span class="prices__table-data--ghost-service">Срок</span>
                                 30 мин
                             </span>
@@ -359,16 +360,16 @@
                         </span>
                     </div>
                     <div class="swiper-slide thumbnail prices__table-element">
-                        <span class="prices__table-data">
+                        <span class="prices__table-data  prices__table-data--service">
                             <span class="prices__table-data--ghost-service">Ремонтные услуги</span>
                             Замена дисплея
                         </span>
-                        <span class="prices__table-data">
+                        <span class="prices__table-data prices__table-data--price">
                             <span class="prices__table-data--ghost-service">Цена</span>
                             1 000 ₽
                         </span>
                         <span class="prices__table-data prices__table-data--composite prices__table-data--ghost-complition-time">
-                            <span class="prices__data-link-description">
+                            <span class="prices__data-link-description prices__table-data--time">
                                 <span class="prices__table-data--ghost-service">Срок</span>
                                 30-120 мин
                             </span>
@@ -376,16 +377,16 @@
                         </span>
                     </div>
                     <div class="swiper-slide thumbnail prices__table-element">
-                        <span class="prices__table-data">
+                        <span class="prices__table-data  prices__table-data--service">
                             <span class="prices__table-data--ghost-service">Ремонтные услуги</span>
                             Замена полифонического динамика
                         </span>
-                        <span class="prices__table-data">
+                        <span class="prices__table-data prices__table-data--price">
                             <span class="prices__table-data--ghost-service">Цена</span>
                             1 000 ₽
                         </span>
                         <span class="prices__table-data prices__table-data--composite prices__table-data--ghost-complition-time">
-                            <span class="prices__data-link-description">
+                            <span class="prices__data-link-description  prices__table-data--time">
                                 <span class="prices__table-data--ghost-service">Срок</span>
                                 30-120 мин
                             </span>
@@ -393,16 +394,16 @@
                         </span>
                     </div>
                     <div class="swiper-slide thumbnail prices__table-element">
-                        <span class="prices__table-data">
+                        <span class="prices__table-data  prices__table-data--service">
                             <span class="prices__table-data--ghost-service">Ремонтные услуги</span>
                             Тестирование с выдачей технического заключения
                         </span>
-                        <span class="prices__table-data">
+                        <span class="prices__table-data prices__table-data--price">
                             <span class="prices__table-data--ghost-service">Цена</span>
                             1 000 ₽
                         </span>
                         <span class="prices__table-data prices__table-data--composite prices__table-data--ghost-complition-time">
-                            <span class="prices__data-link-description">
+                            <span class="prices__data-link-description prices__table-data--time">
                                 <span class="prices__table-data--ghost-service">Срок</span>
                                 30-120 мин
                             </span>
@@ -410,16 +411,16 @@
                         </span>
                     </div>
                     <div class="swiper-slide thumbnail prices__table-element">
-                        <span class="prices__table-data">
+                        <span class="prices__table-data  prices__table-data--service">
                             <span class="prices__table-data--ghost-service">Ремонтные услуги</span>
                             Замена программного обеспечения
                         </span>
-                        <span class="prices__table-data">
+                        <span class="prices__table-data prices__table-data--price">
                             <span class="prices__table-data--ghost-service">Цена</span>
                             1 000 ₽
                         </span>
                         <span class="prices__table-data prices__table-data--composite prices__table-data--ghost-complition-time">
-                            <span class="prices__data-link-description">
+                            <span class="prices__data-link-description prices__table-data--time">
                                 <span class="prices__table-data--ghost-service">Срок</span>
                                 30-120 мин
                             </span>
@@ -436,7 +437,7 @@
                 предложения на постоянное обслуживание, оставьте заявку.
                 </span>
                 <br>
-                <span class="prices__information-link">
+                <span class="prices__information-link-container">
                     <a href="#" class="pricese__information-link">
                     Получить коммерческое<br class="force__linebreak"/> предложение
                     </a>
@@ -448,7 +449,7 @@
         <footer class="footer">
             <div class="footer__apesong">© 2019 CPS <br> Разработано командой Apesong</div>
             <div class="footer__privacy-policy">Политика конфиденциальности</div>
-            <div class="footer__note">Информация, размещенная на данной <br class="force__linebreak"/> странице, не является публичной офертой</div>
+            <div class="footer__note">Информация, размещенная на данной странице, не является публичной офертой</div>
         </footer>
         
     

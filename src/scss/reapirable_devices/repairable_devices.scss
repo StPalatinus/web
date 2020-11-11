@@ -9,22 +9,28 @@ $brands__link-after-circle-element-active-background-color: aqua;
 
 .repairable-devices {
     box-sizing: border-box;
+    //padding-top: 2px;
+}
+
+.repairable-devices__header {
+    padding-top: 12px;
 }
 
 .repairable-devices__wrapper {
-    padding-bottom: 38px;
+    padding-bottom: 22px;
 }
 
 
 .prices__swiper-container,
 .repairable-devices__swiper-container {
+    display: flex;
     z-index: 0;
 }
 
 
 .repairable-device__thumbnail {
     box-sizing: border-box;
-    width: 224px;
+    width: 240px;
     height: 160px;
     //margin-left: 0;
     //margin-right: 0;
@@ -38,6 +44,7 @@ $brands__link-after-circle-element-active-background-color: aqua;
     //width: 100%;
     //height: 100%;
     //margin-left: 16px;
+    text-decoration: none;
     &:after {
         position: absolute;
         content: "";
@@ -45,7 +52,7 @@ $brands__link-after-circle-element-active-background-color: aqua;
         height: 40px;
         border-radius: 50%;
         right: 14px;
-        top: 75%;
+        top: 77%;
         transform: translateY(-50%);
         border: 1px solid $repairable-devices__link-after-circle-element-border;
     }
@@ -59,7 +66,7 @@ $brands__link-after-circle-element-active-background-color: aqua;
         border-top: none;
         transform-origin: center;
         right: 32px;
-        top: 75%;
+        top: 77%;
         //transform: translate(-50%, -50%);
         transform: translate(-1px, -4px) rotate(-45deg);
         outline: none;
@@ -91,14 +98,49 @@ $brands__link-after-circle-element-active-background-color: aqua;
 }
 
 .repairable-devices__link--inner-text {
-    position: absolute;
+    display: block;
+    //position: absolute;
     @include default-text-settings;
-    left: 16px;
-    top: 16px;
+    transform: translate(18px, 13px);
+    font-weight: 600;
+    //left: 16px;
+    //top: 16px;
     white-space: nowrap;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    font-family: inherit;
+}
+
+.repairable-devices__pagination {
+    transform: translateY(5px);
+}
+
+@media only screen and (min-width:500px)  {
+    
+    .repairable-devices__wrapper {
+        display: grid;
+		grid-template-columns:auto auto;
+		justify-content: center;
+		//grid-auto-flow: dense;
+		column-gap: 24px;
+		row-gap: 16px;
+		height: 140px;
+		margin-left: auto;
+		margin-right: auto;
+    }
+
+    .repairable-devices__wrapper--maximized {
+        height: 100%;
+    }
 }
 
 @media only screen and (min-width: 768px)  {
+
+    .repairable-devices {
+        padding-top: 24px;
+    }
+
     .repairable-devices__header {
         height: 64px;
         padding-left: calc(100% / 2 - 384px);
@@ -110,7 +152,7 @@ $brands__link-after-circle-element-active-background-color: aqua;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        max-width: 768px;
+        //max-width: 768px;
     }
 
     .repairable-devices__wrapper {
@@ -119,12 +161,10 @@ $brands__link-after-circle-element-active-background-color: aqua;
         justify-content: center;
         height: 116px;
         column-gap: 24px;
+        padding-bottom: 46px;
         row-gap: 16px;
+        margin-bottom: 0;
         overflow: hidden;
-    }
-
-    .repairable-devices__wrapper--maximized {
-        height: 100%;
     }
 
     .repairable-device__thumbnail {
@@ -137,6 +177,18 @@ $brands__link-after-circle-element-active-background-color: aqua;
         flex-grow: 0;
         margin-left: 0;
     }
+
+    .repairable-devices__pagination {
+        display: none;
+    }
+
+    .button__showhide--repairable-devices {
+        margin-top: 20px;
+    }
+
+    .repairable-devices__pagination {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1120px)  {
@@ -148,7 +200,7 @@ $brands__link-after-circle-element-active-background-color: aqua;
     }
     .repairable-devices__swiper-container {
         //margin: 0 auto;
-        max-width: 1120px;
+        //max-width: 1120px;
     }
 
     .repairable-devices__wrapper {
@@ -171,12 +223,24 @@ $brands__link-after-circle-element-active-background-color: aqua;
 }
 
 @media only screen and (min-width: 1440px)  {
-	.repairable-devices__swiper-container {
+    .repairable-devices__swiper-container {
         //margin: 0 auto;
         max-width: 1120px;
+        transform: translate(0, -   5px);
+    }
+
+    .repairable-devices__header {
+        padding-left: 4px;
+        padding-top: 20px;
+        margin-top: 20px;
+        margin-bottom: 12px;
     }
 
     .repairable-devices__wrapper {
         column-gap: 32px;
     }
+
+    .button__showhide--repairable-devices {
+        transform: translate(10px, -6px);
+    }    
 }

@@ -5,69 +5,60 @@ $modal-default-text-color: #7E7E82;
 $modal-alert-text-color: #FF3E79;
 $modal-backbround-color: #FFF;
 $form-heder-color: #1B1C21;
+$modal__feedback--side-block-background-color: #FFFFFF;
+$modal__feedback--side-block-border-color: #D9FFF5;
 $modal__feedback--side-block-shadow1: rgba(69, 79, 126, 0.02);
 $modal__feedback--side-block-shadow2:  rgba(14, 24, 80, 0.2);
+$button__with_arrow-text-color: #FFFFFF;
+$modal__input-fields-default-border-color: #EAEAEA;
+$modal__input-fields-default-border-outline-color: #D9E6E9;
 
 
 @mixin modal-default-style {
     display: block;
-    position: fixed;
-    //box-sizing: border-box;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    //width: 100%;
-    //height: 100%;
-    //height: 100vh;
     overflow: hidden;
     color: $modal-default-text-color;
     background-color: $modal-bg-color-for-mobiles-and-planshets;
     font-family: TT Lakes;
     font-size: 14px;
     line-height: 16px;
-    z-index: 24;
+    z-index: 100;
     display: none;
 }
 
 .modal__feedback--side-block {
-    //position: fixed;
-    //display: flex;
-    //width: 100%;
-    //max-width: 440px;
-    height: 100vh;
-    padding: 100px 24px 24px;
-    //overflow: hidden;
-    background: #FFFFFF;
-    border-left: 1px solid #D9FFF5;
+    position: fixed;
+    box-sizing: border-box;
+    right: 0;
+    height: 100%;
+    //transform: translate(350px);
+    padding: 48px 24px 24px;
+    background: $modal__feedback--side-block-background-color;
+    border-left: 1px solid $modal__feedback--side-block-border-color;
     border-radius: 1px;
-    //filter: drop-shadow(0px 0px 25px $mobile-menu-drop-shadow-color);
     box-shadow: -2px 0px 4px $modal__feedback--side-block-shadow1, 16px 0px 52px $modal__feedback--side-block-shadow2;
 }
 
-
-
-/*
-.modal__feedback--side-block {
-    margin: 0 auto;
-}
-*/
 .modal_content-group {
     position: relative;
     border: 0 none;
     padding-bottom: 80px;
     max-width: 440px;
-    //margin: 0 auto;
 }
 
 
 .button__with_arrow {
     @include button__with_arrow;
+    color: $button__with_arrow-text-color;
 }
 
 .modal {
-    @include modal-default-style;
-    
+    @include modal-default-style; 
 }
 
 .modal__form-header--notch {
@@ -89,7 +80,6 @@ $modal__feedback--side-block-shadow2:  rgba(14, 24, 80, 0.2);
 .modal__call-form,
 .modal__feedback-form {
     position: relative;
-    //overflow: hidden;
 }
 
 .modal--alert-text {
@@ -108,9 +98,9 @@ $modal__feedback--side-block-shadow2:  rgba(14, 24, 80, 0.2);
 
 %modal__input-fields-default-settinds {
     box-sizing:  border-box;
-    border: 1px solid #EAEAEA;
+    border: 1px solid $modal__input-fields-default-border-color;
     border-radius: 8px;
-    outline-color: #d9e6e9;
+    outline-color: $modal__input-fields-default-border-outline-color;
     padding: 2px 16px;
     font-size: 16px;
     line-height: 24px;
@@ -147,7 +137,7 @@ $modal__feedback--side-block-shadow2:  rgba(14, 24, 80, 0.2);
     height: 32px;
     right: 0;
     margin-top: 44px;
-    background-image: url('/../../img/icons/arrow.svg');
+    background-image: url('./../img/icons/arrow.svg');
     background-position: 110% 50%;
     background-size: 40% 40%;
     background-repeat: no-repeat;
@@ -161,7 +151,7 @@ $modal__feedback--side-block-shadow2:  rgba(14, 24, 80, 0.2);
 
 
 
-@media only screen and (min-width: 580px)  {
+@media only screen and (min-width: 530px)  {
 	.body {
 		overflow: hidden;
 	}
@@ -170,12 +160,31 @@ $modal__feedback--side-block-shadow2:  rgba(14, 24, 80, 0.2);
         width: 320px;
     }
 
-    .modal__feedback--side-block {
-        position: fixed;
-        right: 0;
-        max-width: 440px;
+
+    @keyframes modals-menuslide {
+        0% {transform: translateX(0px);}
+        100% {transform: translateX(-526px)}
     }
 
+    .modal__feedback--side-block {
+        position: fixed;
+        right: -526px;
+        max-width: 440px;
+        //transform: translateX(-526px);
+        animation-name: modals-menuslide;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+/*
+    .modal__feedback--visible {
+        > .modal__feedback--side-block {
+            animation-name: menuslide-menuslide;
+            animation-duration: 1s;
+            //transform: translateX(-526px);
+            //animation-fill-mode: forwards;
+        }
+    }
+*/
     .modal__input-filed,
     .modal__filedset {
         //width: 360px;

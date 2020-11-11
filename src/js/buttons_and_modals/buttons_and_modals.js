@@ -1,4 +1,5 @@
   'use strict';
+  
     const       showText = "Показать все";
     const       hideText = "Скрыть";
     const       readMore = "Читать далее";
@@ -16,14 +17,6 @@
     const       callModalClose = document.querySelector('.modal__call--close-button');
     const       body = document.body;
     
-    //const       htmlDefaultOverf = html.style.overflow;
-    
-    //console.log(html.style);
-    //console.log(html2.style.overflow);
-    
-
-    //console.log(feedbackModalClose);
-    //const       openMenu = document.querySelector('.button--burger');
     
     function toggleSize (clickedButton, container, toggleClass, toggleText) {
       
@@ -36,34 +29,16 @@
       } if (clickedButton.classList.contains('article__read-more')) {
       container.classList.toggle(toggleClass);
       clickedButton.textContent = clickedButton.classList.toggle(toggleText)
-                            ? clickedButton.textContent = readMore 
-                            : clickedButton.textContent = hide;
+                            ? clickedButton.textContent = hide 
+                            : clickedButton.textContent = readMore;
       }
     }
-
-    /*
-      function toggleSize (container, toggleClass) {
-      container.classList.toggle('brands__container--maximized');
-            showHide.textContent = showHide.classList.toggle('showhide__opened')
-                                  ? showHide.textContent = hideText 
-                                  : showHide.textContent = showText;
-    }
-    */
-        
 
     
     onclick = function (e) {
       
         let clickedButton = e.target;
-        //console.log(e.target);
-        //console.log(clickedButton);
-        //console.log(e.target.parentNode);
-
-        //console.log(e.target.classlist);
-        //console.log(clickedButton.contains('button__showhide'));
-        //console.log(e.target.parentNode.classList.contains('brands'));
-
-
+ 
           if (clickedButton.parentNode.classList.contains('brands') && 
           clickedButton.classList.contains('button__showhide')){
               const       container = document.querySelector('.brands__container');
@@ -81,12 +56,13 @@
           }
     };
 
-    openMenu.onclick = function(e) {
+    
+    openMenu.onclick = function() {
       mobileMenu.classList.toggle('mobile-menu--visible');
       body.style.position = "fixed";
     }
 
-    closeMenu.onclick = function(e) {
+    closeMenu.onclick = function() {
       mobileMenu.classList.toggle('mobile-menu--visible');
       feedbackModal.classList.remove('modal__feedback--visible');
       callModal.classList.remove('modal__call--visible');
@@ -95,52 +71,36 @@
 
 
 
-    mobileMenuFeedback.onclick = function (e) {
+    mobileMenuFeedback.onclick = function () {
       feedbackModal.classList.toggle('modal__feedback--visible');
       callModal.classList.remove('modal__call--visible');
       body.style.position = "fixed";
     }
     
-    topMenuFeedback.onclick = function (e) {
+    topMenuFeedback.onclick = function () {
       feedbackModal.classList.toggle('modal__feedback--visible');
       body.style.position = "fixed";
     }
 
-    feedbackModalClose.onclick = function (e) {
+    feedbackModalClose.onclick = function () {
       feedbackModal.classList.toggle('modal__feedback--visible');
-      body.style.position = "fixed";
+      body.style.position = "initial";
     }
 
 
 
-    mobileMenuCall.onclick = function (e) {
+    mobileMenuCall.onclick = function () {
       callModal.classList.toggle('modal__call--visible');
       feedbackModal.classList.remove('modal__feedback--visible');
       body.style.position = "fixed";
     }
 
-    topMenuCall.onclick = function (e) {
+    topMenuCall.onclick = function () {
       callModal.classList.toggle('modal__call--visible');
       body.style.position = "fixed";
     }
 
-    callModalClose.onclick = function (e) {
+    callModalClose.onclick = function () {
       callModal.classList.toggle('modal__call--visible');
       body.style.position = "initial";
     }
-    /*
-    function toggleScroll (mode) {
-      mode 
-          ?
-          : ;
-    }
-    */
-
-    /*
-    html, 
-    body {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-    }
-    */

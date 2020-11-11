@@ -2,6 +2,7 @@
 //@import './../node_modules/normalize.css/normalize.css';
 @import '~normalize.css';
 @import '/fonts/fonts.scss';
+@import './../fonts/ttlakes.css';
 @import '~swiper/swiper.scss';
 @import '~swiper/components/pagination/pagination.scss';
 @import '~swiper/components/navigation/navigation.scss';
@@ -17,7 +18,6 @@
 @import '/modals/modals.scss';
 //@import '../debug_outline.css';
 
-
 $bgColor: #24292e;
 $text: #fff;
 
@@ -31,6 +31,8 @@ html {
   background-color: #F2F2F2;
   overflow-y: auto;
   height: min-content;
+  max-width: 1426px;
+  margin: 0 auto;
 }
 
 ul {
@@ -67,8 +69,8 @@ ul {
 
 @media only screen and (min-width: 1440px)  {
     .body {
-      display: grid;
-      grid-template-columns: 380px 100%;
+      //display: grid;
+      //grid-template-columns: 308px 100%;
       column-gap: normal;
       justify-content: space-between;
       //position: absolute;
@@ -77,16 +79,19 @@ ul {
       //width: calc(100% - 360px);
       padding-right: 0x;
       margin-right: 0;
+      //padding-left: 0;
     }
-
+    /*
     .mobile-menu{
       grid-column: 1 / 2;
       grid-row: 1 / 3;
+      width: 308px;
     }
 
     .aside-reclam {
       grid-column: 1 / 2;
       grid-row: 3 / 7;
+      width: 308px;
     }
     
     .header,
@@ -96,7 +101,26 @@ ul {
     .prices,
     .footer {
       grid-column: 2 / 3;
-      position: initial;
-      width: calc(100% - 360px);		
+      grid-row: span;
+      //position: initial;
+      height: ;
+      width: calc(100% - 308px);		
+    }
+    */
+
+    .mobile-menu,
+    .aside-reclam {
+      width: 308px;
+      float: left;
+    }
+
+    .header,
+    .main,
+    .brands,
+    .repairable-devices,
+    .prices,
+    .footer {
+      float: right;
+      width: calc(100% - 308px);	
     }
 }

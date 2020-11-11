@@ -25,11 +25,29 @@ $footer-border-color: #D9FFF5;
 .footer__apesong,
 .footer__privacy-policy,
 .footer__note {
+    @include footer-text-stile;
     text-align: center;
     flex-basis: 33%;
-    padding: 8px;
+    padding-bottom: 16px;
+    //padding-left: 16px;
+    //padding-right: 16px;
     flex-grow: 1;
     flex-shrink: 1;
+    //overflow: hidden;
+}
+
+.footer__apesong  {
+    text-align: center;
+}
+
+.footer__privacy-policy {
+    text-align: center;
+}
+
+.footer__note {
+    text-align: center;
+    vertical-align: top;
+    word-wrap: normal;
 }
 
 .footer__apesong {
@@ -92,8 +110,11 @@ $footer-border-color: #D9FFF5;
 }
 
 @media only screen and (min-width: 1440px)  {
+    .footer__privacy-policy {
+        text-align: left;
+    }
     .footer {
-        padding-right: 350px;
+        //padding-right: 350px;
     }  
 
     .footer__apesong  {
