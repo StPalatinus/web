@@ -16,46 +16,56 @@
     const       callModal = document.querySelector('.modal__call');
     const       callModalClose = document.querySelector('.modal__call--close-button');
     const       body = document.body;
+
+    const       cover = document.querySelector('.cover');
     
     
-    function toggleSize (clickedButton, container, toggleClass, toggleText) {
+    function toggleSize (clickedItem, container, toggleClass, toggleText) {
       
       
-      if (clickedButton.classList.contains('button__showhide')) {
+      if (clickedItem.classList.contains('button__showhide')) {
         container.classList.toggle(toggleClass);
-        clickedButton.textContent = clickedButton.classList.toggle(toggleText)
-                              ? clickedButton.textContent = hideText 
-                              : clickedButton.textContent = showText;
-      } if (clickedButton.classList.contains('article__read-more')) {
+        clickedItem.textContent = clickedItem.classList.toggle(toggleText)
+                              ? clickedItem.textContent = hideText 
+                              : clickedItem.textContent = showText;
+      } if (clickedItem.classList.contains('article__read-more')) {
       container.classList.toggle(toggleClass);
-      clickedButton.textContent = clickedButton.classList.toggle(toggleText)
-                            ? clickedButton.textContent = hide 
-                            : clickedButton.textContent = readMore;
+      clickedItem.textContent = clickedItem.classList.toggle(toggleText)
+                            ? clickedItem.textContent = hide 
+                            : clickedItem.textContent = readMore;
       }
     }
 
     
     onclick = function (e) {
-      
-        let clickedButton = e.target;
- 
-          if (clickedButton.parentNode.classList.contains('brands') && 
-          clickedButton.classList.contains('button__showhide')){
-              const       container = document.querySelector('.brands__container');
-              toggleSize (clickedButton, container, 'brands__container--maximized','showhide__opened');
-          } 
-          if (clickedButton.parentNode.classList.contains('repairable-devices') && 
-          clickedButton.classList.contains('button__showhide')) {
-              const       container = document.querySelector('.repairable-devices__wrapper');
-              toggleSize (clickedButton, container, 'repairable-devices__wrapper--maximized', 'showhide__opened');
-          }
-          if (clickedButton.parentNode.classList.contains('article__text') && 
-          clickedButton.classList.contains('article__read-more')) {
-            const       container = document.querySelector('.article__text--inner');
-            toggleSize (clickedButton, container, 'article__text--inner--maximized', 'showhide__opened');
-          }
-    };
+        
+        let clickedItem = e.target;
 
+        if (clickedItem.parentNode.classList.contains('brands') && 
+        clickedItem.classList.contains('button__showhide')){
+            const       container = document.querySelector('.brands__container');
+            toggleSize (clickedItem, container, 'brands__container--maximized', 'showhide__opened');
+        } 
+        if (clickedItem.parentNode.classList.contains('repairable-devices') && 
+        clickedItem.classList.contains('button__showhide')) {
+            const       container = document.querySelector('.repairable-devices__wrapper');
+            toggleSize (clickedItem, container, 'repairable-devices__wrapper--maximized', 'showhide__opened');
+        }
+        if (clickedItem.parentNode.classList.contains('article__text') && 
+        clickedItem.classList.contains('article__read-more')) {
+          const       container = document.querySelector('.article__text--inner');
+          toggleSize (clickedItem, container, 'article__text--inner--maximized', 'showhide__opened');
+        }
+        if (clickedItem.classList.contains('modal__feedback--visible')) {
+          feedbackModal.classList.remove('modal__feedback--visible');
+        }
+        if (clickedItem.classList.contains('modal__call--visible')) {
+          callModal.classList.remove('modal__call--visible');
+        }
+        if (clickedItem.classList.contains('cover')) {
+          mobileMenu.classList.remove('mobile-menu--visible');
+        }
+    };
     
     openMenu.onclick = function() {
       mobileMenu.classList.toggle('mobile-menu--visible');

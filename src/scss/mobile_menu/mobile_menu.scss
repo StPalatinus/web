@@ -186,6 +186,8 @@ $mobile-menu__navbar-1440-text-color: #1B1C21;
 	line-height: 32px;
 }
 .mobile-menu__lenselect {
+	display: flex;
+	flex-direction: row;
 	margin-top: 40px;
 }
 .lenselect__len {
@@ -307,9 +309,10 @@ $mobile-menu__navbar-1440-text-color: #1B1C21;
 */
 
 @media only screen and (min-width: 1440px)  {
-	//.mobile-menu {
-	//	display: block;
-	//}
+	.mobile-menu {
+		display: block;
+		animation-name:none;
+	}
 
 	.body {
 		overflow: hidden;
