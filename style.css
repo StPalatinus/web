@@ -1254,7 +1254,7 @@ template {
   margin-bottom: 10px; }
 
 .main__nav {
-  overflow-y: auto;
+  overflow-y: hidden;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   margin-top: 0px;
