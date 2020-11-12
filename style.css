@@ -1250,23 +1250,22 @@ template {
   font-family: TT Lakes;
   font-size: 28px;
   line-height: 40px;
-  letter-spacing: -0.6px; }
+  letter-spacing: -0.6px;
+  margin-bottom: 10px; }
 
 .main__nav {
-  /*
-	overflow-y: auto;
-	-ms-overflow-style: none;
-	overflow: -moz-scrollbars-none;
-	*/
-  margin-top: 22px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  margin-top: 0px;
   margin-left: 12px;
-  /*
-	user-select: none;
-	&::-webkit-scrollbar {
-		width: 0px;
-		background: transparent;
-	}
-	*/ }
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .main__nav::-webkit-scrollbar {
+    height: 0px;
+    background: transparent; }
 
 .title--notch::before {
   content: "";
@@ -1453,7 +1452,7 @@ template {
 
 @media only screen and (min-width: 768px) {
   .main__nav {
-    margin-top: 30px;
+    margin-top: 20px;
     padding-left: 16px; }
   .article {
     display: block; }
@@ -2543,6 +2542,8 @@ template {
 @media only screen and (min-width: 1440px) {
   .mobile-menu {
     display: block;
+    width: 320px;
+    height: 100vh;
     -webkit-animation-name: none;
             animation-name: none; }
   .body {
@@ -2555,9 +2556,6 @@ template {
     flex-direction: row;
     flex-basis: 40px;
     transform: translateY(10px); }
-  .mobile-menu {
-    width: 320px;
-    height: 100vh; }
   .button--search {
     transform: translate(-5px); }
   .mobile-menu__navbar {
@@ -3242,8 +3240,7 @@ template {
     padding: 24px 24px 32px;
     width: 320px;
     min-height: 750px;
-    background-color: #FFF;
-    z-index: 2; } }
+    background-color: #FFF; } }
 
 /*
 .button__with_arrow {
@@ -3276,7 +3273,7 @@ template {
     }
 }
 */
-.modal__feedback--side-block {
+.modal__side-block {
   position: fixed;
   box-sizing: border-box;
   right: 0;
@@ -3433,18 +3430,18 @@ template {
     width: 320px; }
   @-webkit-keyframes modals-menuslide {
     0% {
-      transform: translateX(0px); }
+      transform: translateX(526px); }
     100% {
-      transform: translateX(-526px); } }
+      transform: translateX(0px); } }
   @keyframes modals-menuslide {
     0% {
-      transform: translateX(0px); }
+      transform: translateX(526px); }
     100% {
-      transform: translateX(-526px); } }
-  .modal__feedback--side-block {
+      transform: translateX(0px); } }
+  .modal__side-block {
     position: fixed;
-    right: -526px;
     max-width: 440px;
+    transform: translateX(526px);
     -webkit-animation-name: modals-menuslide;
             animation-name: modals-menuslide;
     -webkit-animation-duration: 1s;
@@ -3456,7 +3453,7 @@ template {
     padding-top: 105px; }
   /*
     .modal__feedback--visible {
-        > .modal__feedback--side-block {
+        > .modal__side-block {
             animation-name: menuslide-menuslide;
             animation-duration: 1s;
             //transform: translateX(-526px);
@@ -3524,47 +3521,44 @@ ul {
 
 @media only screen and (min-width: 1440px) {
   .body {
+    display: grid;
+    grid-template-columns: 308px 100%;
     -moz-column-gap: normal;
          column-gap: normal;
     justify-content: space-between;
     right: 0;
     padding-right: 0x;
     margin-right: 0; }
-  /*
-    .mobile-menu{
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
-      width: 308px;
-    }
-
-    .aside-reclam {
-      grid-column: 1 / 2;
-      grid-row: 3 / 7;
-      width: 308px;
-    }
-    
-    .header,
-    .main,
-    .brands,
-    .repairable-devices,
-    .prices,
-    .footer {
-      grid-column: 2 / 3;
-      grid-row: span;
-      //position: initial;
-      height: ;
-      width: calc(100% - 308px);		
-    }
-    */
-  .mobile-menu,
+  .mobile-menu {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 308px; }
   .aside-reclam {
-    width: 308px;
-    float: left; }
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    width: 308px; }
   .header,
   .main,
   .footer {
-    float: right;
-    width: calc(100% - 308px); } }
+    grid-column: 2 / 3;
+    width: calc(100% - 308px); }
+  /*
+    .mobile-menu,
+    .aside-reclam {
+      width: 308px;
+      float: left;
+    }
+
+    .header,
+    .main,
+    //.brands,
+    //.repairable-devices,
+    //.prices,
+    .footer {
+      float: right;
+      width: calc(100% - 308px);	
+    }
+    */ }
 
 
 /*# sourceMappingURL=style.css.map*/
