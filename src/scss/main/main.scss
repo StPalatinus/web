@@ -24,24 +24,25 @@ $button__showhide-hovered-and-active-box-shadow-filter-color:  #EAEAEA;
 	font-size: 28px;
 	line-height: 40px;
 	letter-spacing: -0.6px;
+	margin-bottom: 10px;
 }
 
 .main__nav {
-	/*
-	overflow-y: auto;
+	
+	overflow-y: hidden;
 	-ms-overflow-style: none;
 	overflow: -moz-scrollbars-none;
-	*/
-	margin-top: 22px;
+	
+	margin-top: 0px;
 	margin-left: 12px;
 	//padding: 10px 0;
-	/*
+	
 	user-select: none;
 	&::-webkit-scrollbar {
-		width: 0px;
+		height: 0px;
 		background: transparent;
 	}
-	*/
+	
 }
 
 .title--notch {
@@ -276,7 +277,7 @@ $button__showhide-hovered-and-active-box-shadow-filter-color:  #EAEAEA;
 	}
 
 	.main__nav{
-		margin-top: 30px;
+		margin-top: 20px;
 		padding-left: 16px;
 	}
 

@@ -5,10 +5,10 @@ $modal-default-text-color: #7E7E82;
 $modal-alert-text-color: #FF3E79;
 $modal-backbround-color: #FFF;
 $form-heder-color: #1B1C21;
-$modal__feedback--side-block-background-color: #FFFFFF;
-$modal__feedback--side-block-border-color: #D9FFF5;
-$modal__feedback--side-block-shadow1: rgba(69, 79, 126, 0.02);
-$modal__feedback--side-block-shadow2:  rgba(14, 24, 80, 0.2);
+$modal__side-block-background-color: #FFFFFF;
+$modal__side-block-border-color: #D9FFF5;
+$modal__side-block-shadow1: rgba(69, 79, 126, 0.02);
+$modal__side-block-shadow2:  rgba(14, 24, 80, 0.2);
 $button__with_arrow-text-color: #FFFFFF;
 $modal__input-fields-default-border-color: #EAEAEA;
 $modal__input-fields-default-border-outline-color: #D9E6E9;
@@ -31,17 +31,17 @@ $modal__input-fields-default-border-outline-color: #D9E6E9;
     display: none;
 }
 
-.modal__feedback--side-block {
+.modal__side-block {
     position: fixed;
     box-sizing: border-box;
     right: 0;
     height: 100%;
     //transform: translate(350px);
     padding-top: 48px;
-    background: $modal__feedback--side-block-background-color;
-    border-left: 1px solid $modal__feedback--side-block-border-color;
+    background: $modal__side-block-background-color;
+    border-left: 1px solid $modal__side-block-border-color;
     border-radius: 1px;
-    box-shadow: -2px 0px 4px $modal__feedback--side-block-shadow1, 16px 0px 52px $modal__feedback--side-block-shadow2;
+    box-shadow: -2px 0px 4px $modal__side-block-shadow1, 16px 0px 52px $modal__side-block-shadow2;
     padding-left: 0;
     padding-top: 105px;
 }
@@ -180,17 +180,17 @@ $modal__input-fields-default-border-outline-color: #D9E6E9;
         width: 320px;
     }
 
-
+    
     @keyframes modals-menuslide {
-        0% {transform: translateX(0px);}
-        100% {transform: translateX(-526px)}
+        0% {transform: translateX(526px);}
+        100% {transform: translateX(0px)}
     }
-
-    .modal__feedback--side-block {
+    
+    .modal__side-block {
         position: fixed;
-        right: -526px;
+        //right: -526px;
         max-width: 440px;
-        //transform: translateX(-526px);
+        transform: translateX(526px);
         animation-name: modals-menuslide;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -201,7 +201,7 @@ $modal__input-fields-default-border-outline-color: #D9E6E9;
 
 /*
     .modal__feedback--visible {
-        > .modal__feedback--side-block {
+        > .modal__side-block {
             animation-name: menuslide-menuslide;
             animation-duration: 1s;
             //transform: translateX(-526px);

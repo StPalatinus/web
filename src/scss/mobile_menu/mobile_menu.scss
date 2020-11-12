@@ -311,6 +311,8 @@ $mobile-menu__navbar-1440-text-color: #1B1C21;
 @media only screen and (min-width: 1440px)  {
 	.mobile-menu {
 		display: block;
+		width: 320px;
+		height: 100vh;
 		animation-name:none;
 	}
 
@@ -328,11 +330,6 @@ $mobile-menu__navbar-1440-text-color: #1B1C21;
 		flex-direction: row;
 		flex-basis: 40px;
 		transform: translateY(10px);
-	}
-
-	.mobile-menu {
-		width: 320px;
-		height: 100vh;
 	}
 
 	.button--search {
