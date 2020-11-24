@@ -1,232 +1,232 @@
-$header-background-color: #FFFFFF;
-$header-border-color: #D9FFF5;
-$button-background-color: #FF3E79;
-$button-text-color: #1B1C21;
-$button-dividers-background-color: #EAEAEA;
+$header-background-color: #ffffff;
+$header-border-color: #d9fff5;
+$button-background-color: #ff3e79;
+$button-text-color: #1b1c21;
+$button-dividers-background-color: #eaeaea;
 
 .header {
-	display: flex;
-	align-items: center;
-	box-sizing: border-box;
-	width: 100%;
-	height: 88px;
-	background: $header-background-color;
-	border-bottom: 2px solid $header-border-color;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 88px;
+  background: $header-background-color;
+  border-bottom: 2px solid $header-border-color;
 }
+
 .header__menu {
-	position: relative;
-	box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
 }
 .feedback-list {
-	display: flex;
-	align-items: center;
-	list-style: none;
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
 .service-list {
-	display: flex;
-	align-items: center;
-	list-style: none;
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
 
 .header-list__services {
-	position: relative;
-	margin-left: auto;
-	transform: translatex(8px);
+  position: relative;
+  margin-left: auto;
+  transform: translatex(8px);
 }
 
 .feedback-list__item {
-	display: flex;
-	align-content: center;
-	position: relative;
-	align-items: center;
-	text-align: center;
+  display: flex;
+  align-content: center;
+  position: relative;
+  align-items: center;
+  text-align: center;
 }
 
 .service-list__item {
-	display: flex;
-	align-content: center;
-	position: relative;
-	align-items: center;
-	text-align: center;
+  display: flex;
+  align-content: center;
+  position: relative;
+  align-items: center;
+  text-align: center;
 }
 
 .button {
-	//display: block;
-	width: 40px;
-	height: 40px;
-	border: 0;
-	padding: 0;
-	background: $button-background-color;
-	border-radius: 20px;
-	text-decoration: none;
-	color: $button-text-color;
-	cursor: pointer;
-	&:hover {
-		opacity: 0.7;
-	}
-	&:focus {
-		opacity: 0.7;
-	}
-	&:active {
-		opacity: 0.7;
-	}
-} 
+  //display: block;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  padding: 0;
+  background: $button-background-color;
+  border-radius: 20px;
+  text-decoration: none;
+  color: $button-text-color;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:focus {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
 .button--inscription {
-	&:hover {
-		+ {
-			.button--contains-text {
-				opacity: 0.7;
-			}
-		}
-	}
-	display: none;
-	user-select: none;
-	cursor: pointer;
+  &:hover {
+    + {
+      .button--contains-text {
+        opacity: 0.7;
+      }
+    }
+  }
+  display: none;
+  user-select: none;
+  cursor: pointer;
 }
 .header__menu--button {
-	margin: 24px 8px;
+  margin: 24px 8px;
 }
 .feedback-list__button {
-	margin: 24px 8px;
+  margin: 24px 8px;
 }
 .service-list__button {
-	margin: 24px 8px;
+  margin: 24px 8px;
 }
 .logo {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 .logo__link {
-	position: relative;
+  position: relative;
 }
 .header__logo {
-	box-sizing: border-box;
-	margin: 19px 17px;
+  box-sizing: border-box;
+  margin: 19px 17px;
 }
 .header__feedback-list {
-	display: none;
+  display: none;
 }
 .button--burger {
-	display: block;
-	align-self: flex-start;
-	margin-right: auto;
-	margin-left: 16px;
-	//background-image: url('./../img/icons/burger.png');
-	background-image: url('./../img/icons/burger.png');
-    background-repeat: no-repeat;
+  display: block;
+  align-self: flex-start;
+  margin-right: auto;
+  margin-left: 16px;
+  //background-image: url('./../img/icons/burger.png');
+  background-image: url("./../img/icons/burger.png");
+  background-repeat: no-repeat;
 }
 .button--burger--divider {
-	&:after {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 2px;
-		height: 32px;
-		background: $button-dividers-background-color;
-		border-radius: 1px;
-		top: 28px;
-		right: -128px;
-	}
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: $button-dividers-background-color;
+    border-radius: 1px;
+    top: 28px;
+    right: -128px;
+  }
 }
 .button--call {
-	background: url('./../img/icons/call.png') no-repeat;
+  background: url("./../img/icons/call.png") no-repeat;
 }
 .button--chat {
-	background: url('./../img/icons/chat.png') no-repeat;
+  background: url("./../img/icons/chat.png") no-repeat;
 }
 .button--profile {
-	background: url('./../img/icons/profile.png') no-repeat;
+  background: url("./../img/icons/profile.png") no-repeat;
 }
 .button--repair {
-	background: url('./../img/icons/repair.png') no-repeat;
+  background: url("./../img/icons/repair.png") no-repeat;
 }
 .button--close {
-	background: url('./../img/icons/close.png') no-repeat;
+  background: url("./../img/icons/close.png") no-repeat;
 }
 .button--search {
-	background: url('./../img/icons/search.png') no-repeat;
+  background: url("./../img/icons/search.png") no-repeat;
 }
 .button--repair--divider {
-	&:before {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 2px;
-		height: 32px;
-		background: $button-dividers-background-color;
-		border-radius: 1px;
-		top: 28px;
-		left: -12px;
-		display: none;
-	}
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: $button-dividers-background-color;
+    border-radius: 1px;
+    top: 28px;
+    left: -12px;
+    display: none;
+  }
 }
 .button--checkstatus {
-	background: url('./../img/icons/checkstatus.png') no-repeat;
+  background: url("./../img/icons/checkstatus.png") no-repeat;
 }
 .main-header__statusbar {
-	display: none;
+  display: none;
 }
 .title {
-	box-sizing: border-box;
-	font-size: 28px;
-	line-height: 40px;
-	letter-spacing: -0.9px;
-	white-space: nowrap;
-	color: #1B1C21;
+  box-sizing: border-box;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+  white-space: nowrap;
+  color: #1b1c21;
 }
 
 .main__title {
-	padding-left: 16px;
-	padding-top: 4px;
-	user-select: none;
+  padding-left: 16px;
+  padding-top: 4px;
+  user-select: none;
 }
 
 @media only screen and (min-width: 768px) {
-	.article__content {
-		padding-top: 16px;
-	}
+  .article__content {
+    padding-top: 16px;
+  }
 
-	.header__divider1 {
-		display: block;
-	}
+  .header__divider1 {
+    display: block;
+  }
 
-	.header__feedback-list {
-		margin-right: 20px;
-		display: flex;
-		margin-left: auto;
-	}
+  .header__feedback-list {
+    margin-right: 20px;
+    display: flex;
+    margin-left: auto;
+  }
 
-	.header-list__services {
-		//margin-left: auto;
-		margin-left: 0;
-		margin-right: 15px;
-	}
+  .header-list__services {
+    //margin-left: auto;
+    margin-left: 0;
+    margin-right: 15px;
+  }
 
-	.header__logo {
-		margin: 19px 26px 16px 40px;
-		
-	}
+  .header__logo {
+    margin: 19px 26px 16px 40px;
+  }
 
-	.logo__link {
-		&:before {
-			display: block;
-		}
-		&:after {
-			display: none;
-		}
-	}
+  .logo__link {
+    &:before {
+      display: block;
+    }
+    &:after {
+      display: none;
+    }
+  }
 
-	.button--burger--divider {
-		&:after {
-			right: -15px;
-			display: block;
-		}
-	}
+  .button--burger--divider {
+    &:after {
+      right: -15px;
+      display: block;
+    }
+  }
 
-	.button--repair--divider {
-		&:before {
-			display: block;
-		}
-	}
+  .button--repair--divider {
+    &:before {
+      display: block;
+    }
+  }
 }
 /*
 @media only screen and (min-width: 1120px) {
@@ -290,81 +290,80 @@ $button-dividers-background-color: #EAEAEA;
 */
 
 @media only screen and (min-width: 1440px) {
-	.header {
-		display: flex;
-		flex-direction: row;
-		flex-basis: 50%;
-		flex-grow: 1;
-		background-color: transparent;
-		border-bottom: transparent;
-		height: 1px;
-	}
-	
-	.main__title {
-		position: relative;
-		//top: -64px;
-		left: 0;
-		padding-left: 24px;
-	}
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    flex-grow: 1;
+    background-color: transparent;
+    border-bottom: transparent;
+    height: 1px;
+  }
 
-	.main {
-		flex-basis: 100%;
-		flex-grow: 2;
-	}
+  .main__title {
+    position: relative;
+    //top: -64px;
+    left: 0;
+    padding-left: 24px;
+  }
 
-	.main__nav {
-		margin-left: 0;
-	}
+  .main {
+    flex-basis: 100%;
+    flex-grow: 2;
+  }
 
-	.header__title {
-		display: block;
-	}
+  .main__nav {
+    margin-left: 0;
+  }
 
-	.button--burger--divider {
-		display: none;
-	}
+  .header__title {
+    display: block;
+  }
 
-	.header__logo {
-		display: none;
-	}
+  .button--burger--divider {
+    display: none;
+  }
 
-	.header__feedback-list {
-		visibility: hidden;
-		//transform: translate(-5px);
-		//display: none;
-	}
+  .header__logo {
+    display: none;
+  }
 
-	.button--checkstatus {
-		transform: translate(5px);
-		
-	}
+  .header__feedback-list {
+    visibility: hidden;
+    //transform: translate(-5px);
+    //display: none;
+  }
 
-	.button--inscription {
-		font-size: 16px;
-		line-height: 24px;
-		text-align: right;
-		letter-spacing: -0.2px;
-		font-weight: 600;
-	}
+  .button--checkstatus {
+    transform: translate(5px);
+  }
 
-	.header-list__services {
-		position: relative;
-		margin-bottom: 0;
-		transform: translate(-11px, 55px);
-	}
+  .button--inscription {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.2px;
+    font-weight: 600;
+  }
 
-	.button--repair {
-		transform: translate(-2px);
-	}
+  .header-list__services {
+    position: relative;
+    margin-bottom: 0;
+    transform: translate(-11px, 55px);
+  }
 
-	.button--inscription {
-		display: block;
-	}
-	
-	.main-header__statusbar {
-		display: block;
-	}
-/*
+  .button--repair {
+    transform: translate(-2px);
+  }
+
+  .button--inscription {
+    display: block;
+  }
+
+  .main-header__statusbar {
+    display: block;
+  }
+  /*
 	.service-list__item {
 		display: flex;
 		position: relative;
@@ -373,10 +372,9 @@ $button-dividers-background-color: #EAEAEA;
 		text-align: center;
 	}
 */
-	.button--repair--divider {
-		&:before {
-			display: none;
-		}
-	}
-	
+  .button--repair--divider {
+    &:before {
+      display: none;
+    }
+  }
 }
