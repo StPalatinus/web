@@ -1665,8 +1665,8 @@ template {
   box-sizing: border-box;
   width: 100%;
   height: 88px;
-  background: #FFFFFF;
-  border-bottom: 2px solid #D9FFF5; }
+  background: #ffffff;
+  border-bottom: 2px solid #d9fff5; }
 
 .header__menu {
   position: relative;
@@ -1706,10 +1706,10 @@ template {
   height: 40px;
   border: 0;
   padding: 0;
-  background: #FF3E79;
+  background: #ff3e79;
   border-radius: 20px;
   text-decoration: none;
-  color: #1B1C21;
+  color: #1b1c21;
   cursor: pointer; }
   .button:hover {
     opacity: 0.7; }
@@ -1764,7 +1764,7 @@ template {
   display: block;
   width: 2px;
   height: 32px;
-  background: #EAEAEA;
+  background: #eaeaea;
   border-radius: 1px;
   top: 28px;
   right: -128px; }
@@ -1793,7 +1793,7 @@ template {
   display: block;
   width: 2px;
   height: 32px;
-  background: #EAEAEA;
+  background: #eaeaea;
   border-radius: 1px;
   top: 28px;
   left: -12px;
@@ -1811,7 +1811,7 @@ template {
   line-height: 40px;
   letter-spacing: -0.9px;
   white-space: nowrap;
-  color: #1B1C21; }
+  color: #1b1c21; }
 
 .main__title {
   padding-left: 16px;
@@ -2031,7 +2031,7 @@ template {
 
 .brands {
   box-sizing: border-box;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding-top: 19px; }
 
 .brands__header {
@@ -2044,7 +2044,7 @@ template {
   line-height: 23px;
   letter-spacing: -0.2px;
   text-transform: uppercase;
-  color: #7E7E82;
+  color: #7e7e82;
   font-weight: 500;
   border-top: 1px solid #D9FFF5;
   margin-left: 16px;
@@ -2074,13 +2074,13 @@ template {
   font-size: 12px;
   color: #000;
   opacity: 1;
-  background: #DDDDDD;
+  background: #dddddd;
   outline: none;
   text-align: center; }
 
 .swiper-pagination-bullet-active {
   color: #fff;
-  background: #B5B6BC;
+  background: #b5b6bc;
   outline: none; }
 
 .thumbnail__link {
@@ -2138,13 +2138,13 @@ template {
     right: 14px;
     top: 50%;
     transform: translateY(-50%);
-    border: 1px solid #FF3E79; }
+    border: 1px solid #ff3e79; }
   .brands__link:before {
     position: absolute;
     content: "";
     width: 8px;
     height: 8px;
-    border: 1px solid #FF3E79;
+    border: 1px solid #ff3e79;
     border-left: none;
     border-top: none;
     transform-origin: center;
@@ -2216,8 +2216,8 @@ template {
   .brands {
     box-sizing: border-box; }
   .button__showhide {
-    margin-left: calc(100% / 2 - 560px);
-    margin-right: calc(100% / 2 - 560px); }
+    margin-left: calc(100% / 2 - 390px);
+    margin-right: calc(100% / 2 - 390px); }
   .brands__header {
     height: 64px;
     padding-left: calc(100% / 2 - 384px);
@@ -2249,6 +2249,9 @@ template {
   /* BRANDS */
   .brands {
     box-sizing: border-box; }
+  .button__showhide {
+    margin-left: calc(100% / 2 - 550px);
+    margin-right: calc(100% / 2 - 550px); }
   .brands__header {
     padding-left: calc(100% / 2 - 560px);
     padding-right: calc(100% / 2 - 560px); }
@@ -2275,7 +2278,7 @@ template {
   .brands__header {
     padding-left: calc(100% / 2 - 560px);
     padding-right: calc(100% / 2 - 560px);
-    margin-top: 12PX;
+    margin-top: 12px;
     padding-top: 20px;
     margin-bottom: 0px;
     transform: translateX(10px);
@@ -2695,13 +2698,13 @@ template {
     right: 14px;
     top: 77%;
     transform: translateY(-50%);
-    border: 1px solid #FF3E79; }
+    border: 1px solid #ff3e79; }
   .repairable-devices__link:before {
     position: absolute;
     content: "";
     width: 8px;
     height: 8px;
-    border: 1px solid #FF3E79;
+    border: 1px solid #ff3e79;
     border-left: none;
     border-top: none;
     transform-origin: center;
@@ -2745,6 +2748,9 @@ template {
 
 .repairable-devices__pagination {
   transform: translateY(5px); }
+
+.repairable-devices__wrapper--maximized {
+  height: 100%; }
 
 @media only screen and (min-width: 500px) {
   .repairable-devices__wrapper {
@@ -2797,7 +2803,9 @@ template {
   .button__showhide--repairable-devices {
     margin-top: 20px; }
   .repairable-devices__pagination {
-    display: none; } }
+    display: none; }
+  .repairable-devices__wrapper--maximized {
+    height: 100%; } }
 
 @media only screen and (min-width: 1120px) {
   .repairable-devices__header {
